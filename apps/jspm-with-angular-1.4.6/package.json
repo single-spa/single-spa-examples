@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "setup": "jspm install"
+    "setup": "jspm install",
+    "bundle": "jspm bundle entry.js entry.bundle.js --inject"
   },
   "jspm": {
     "dependencies": {
