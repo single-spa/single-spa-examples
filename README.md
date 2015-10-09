@@ -13,7 +13,10 @@ and there will soon be examples for
 - Browserify
 - Apps on the Global object
 
-## How to get the examples running
+## View the demo!
+A [demo is live](http://single-spa.surge.sh) on surge.sh. Don't be turned off by the lack of styling -- I'll be fixing that soon.
+
+## How to get the examples running locally
 ```
 git clone git@github.com:joeldenning/single-spa-examples.git
 cd single-spa-examples
