@@ -1,7 +1,8 @@
 {
   "scripts": {
     "setup": "jspm install",
-    "bundle": "jspm bundle entry.js entry.bundle.js --inject"
+    "bundle": "jspm bundle entry.js entry.bundle.js --inject",
+    "prepare-surge": "npm run bundle"
   },
   "jspm": {
     "dependencies": {

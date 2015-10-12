@@ -1,8 +1,9 @@
 {
   "license": "MIT",
   "scripts": {
-    "setup": "npm install && jspm install && npm run setup-apps",
+    "setup": "npm install && jspm install --unlink && npm run setup-apps",
     "setup-apps": "find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run setup'",
+    "prepare-surge": "npm run setup && find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run prepare-surge' && npm run bundle",
     "start": "http-server . -p 8200",
     "bundle": "jspm bundle bootstrap.js bootstrap.bundle.js --inject",
     "linkSingleSpa": "cd ../single-spa && jspm link npm:single-spa@latest -y && cd ../single-spa-examples && jspm install npm:single-spa@latest --link",
@@ -10,9 +11,9 @@
   },
   "jspm": {
     "dependencies": {
-      "single-spa": "npm:single-spa@latest",
-      "single-spa-angular1": "npm:single-spa-angular1@latest",
-      "single-spa-jspm": "npm:single-spa-jspm@latest"
+      "single-spa": "npm:single-spa@1.1.2",
+      "single-spa-angular1": "npm:single-spa-angular1@1.1.1",
+      "single-spa-jspm": "npm:single-spa-jspm@1.1.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.22",

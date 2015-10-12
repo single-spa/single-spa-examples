@@ -21,6 +21,7 @@
 
     "prestart": "npm install",
     "setup": "npm install",
+    "prepare-surge": "echo 'bower-angular-phonecat doesnt use the prepare-surge step'",
     "start": "http-server -a 0.0.0.0 -p 8000",
 
     "pretest": "npm install",
