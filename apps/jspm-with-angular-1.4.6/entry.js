@@ -21,3 +21,5 @@ angular.module('root-angular-module', [
         template: '<h4>I am view 2 (v2)</h4>'
     })
 });
+
+angular.bootstrap(document.getElementById('app-root'), ['root-angular-module']);

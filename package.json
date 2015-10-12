@@ -5,8 +5,8 @@
     "setup-apps": "find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run setup'",
     "start": "http-server . -p 8200",
     "bundle": "jspm bundle bootstrap.js bootstrap.bundle.js --inject",
-    "linkSingleSpa": "cd ../single-spa && jspm link npm:single-spa@latest -y && cd ../single-spa-examples && jspm install npm:single-spa@latest --link && npm run bundle",
-    "linkSingleSpaAngular1": "cd ../single-spa-angular1 && jspm link npm:single-spa-angular1@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-angular1@latest --link && npm run bundle"
+    "linkSingleSpa": "cd ../single-spa && jspm link npm:single-spa@latest -y && cd ../single-spa-examples && jspm install npm:single-spa@latest --link",
+    "linkSingleSpaAngular1": "cd ../single-spa-angular1 && jspm link npm:single-spa-angular1@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-angular1@latest --link"
   },
   "jspm": {
     "dependencies": {
