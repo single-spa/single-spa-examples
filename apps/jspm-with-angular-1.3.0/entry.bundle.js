@@ -7168,17 +7168,17 @@ System.registerDynamic("github:angular/bower-angular@1.3.0/angular.min", [], fal
   return _retrieveGlobal();
 });
 
-System.registerDynamic("github:angular/bower-angular@1.3.0", ["github:angular/bower-angular@1.3.0/angular.min"], true, function(require, exports, module) {
+System.registerDynamic("github:angular/bower-angular@1.3.0", ["github:angular/bower-angular@1.3.0/angular.min"], true, function(req, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("github:angular/bower-angular@1.3.0/angular.min");
+  module.exports = req('github:angular/bower-angular@1.3.0/angular.min');
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("github:angular-ui/ui-router@0.2.8/release/angular-ui-router", [], true, function(require, exports, module) {
+System.registerDynamic("github:angular-ui/ui-router@0.2.8/release/angular-ui-router", [], true, function(req, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -8520,12 +8520,12 @@ System.registerDynamic("github:angular-ui/ui-router@0.2.8/release/angular-ui-rou
   return module.exports;
 });
 
-System.registerDynamic("github:angular-ui/ui-router@0.2.8", ["github:angular-ui/ui-router@0.2.8/release/angular-ui-router"], true, function(require, exports, module) {
+System.registerDynamic("github:angular-ui/ui-router@0.2.8", ["github:angular-ui/ui-router@0.2.8/release/angular-ui-router"], true, function(req, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("github:angular-ui/ui-router@0.2.8/release/angular-ui-router");
+  module.exports = req('github:angular-ui/ui-router@0.2.8/release/angular-ui-router');
   global.define = __define;
   return module.exports;
 });
