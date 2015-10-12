@@ -17,8 +17,8 @@ System.config({
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.24",
     "core-js": "npm:core-js@1.1.4",
-    "single-spa": "npm:single-spa@latest",
-    "single-spa-angular1": "npm:single-spa-angular1@latest",
+    "single-spa": "npm:single-spa@1.1.2",
+    "single-spa-angular1": "npm:single-spa-angular1@1.1.1",
     "single-spa-jspm": "npm:single-spa-jspm@1.1.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
