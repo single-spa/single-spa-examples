@@ -9,10 +9,10 @@
     </head>
     <body>
         <ul>
-            <li><a href="/" onclick="return window.singlespa(this)">Home</a></li>
-            <li><a href="/phonecat" onclick="return window.singlespa(this)">Angular Phonecat app (the one from the official tutorial)</a></li>
-            <li><a href="/legacy" onclick="return window.singlespa(this)">Angular 1.3 app</a></li>
-            <li><a href="/v2" onclick="return window.singlespa(this)">Angular 1.4 app</a></li>
+            <li><a href="/" onclick="return window.singlespa.navigateTo(this)">Home</a></li>
+            <li><a href="/phonecat" onclick="return window.singlespa.navigateTo(this)">Angular Phonecat app (the one from the official tutorial)</a></li>
+            <li><a href="/legacy" onclick="return window.singlespa.navigateTo(this)">Angular 1.3 app</a></li>
+            <li><a href="/v2" onclick="return window.singlespa.navigateTo(this)">Angular 1.4 app</a></li>
         </ul>
         <div id="app-root" ng-app="root-angular-module">
             <div ui-view></div>
