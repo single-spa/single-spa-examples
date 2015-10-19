@@ -5,7 +5,10 @@ angular.module('root-angular-module', [
     'ui.router'
 ])
 .config(function($stateProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
 
     $stateProvider
     .state('root', {
