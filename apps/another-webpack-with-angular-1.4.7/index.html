@@ -1,11 +1,6 @@
 <html>
     <head>
-        <script src="/jspm_packages/system.src.js"></script>
-        <script src="/config.js"></script>
-        <script>
-            System.import('/bootstrap.js');
-        </script>
-        <base href="/"></base>
+        <script src="main.bundle.js"></script>
     </head>
     <body>
         <ul>
@@ -16,5 +11,15 @@
             <li><a href="/webpack1">Webpack Angular 1.4.7 app</a></li>
             <li><a href="/webpack2">Another Webpack Angular 1.4.7 app</a></li>
         </ul>
+        <h1>This is another Angular 1.4.7 app bundled with webpack</h1>
+        <div>
+            <a href="#/view1">View 1</a>
+        </div>
+        <div>
+            <a href="#/view2">View 2</a>
+        </div>
+        <div id="app-root">
+            <div ng-view></div>
+        </div>
     </body>
 </html>

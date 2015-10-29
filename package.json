@@ -12,7 +12,7 @@
   },
   "jspm": {
     "dependencies": {
-      "single-spa": "npm:single-spa@^1.2.1",
+      "single-spa": "npm:single-spa@^1.2.2",
       "single-spa-angular1": "npm:single-spa-angular1@^1.2.0",
       "single-spa-jspm": "npm:single-spa-jspm@^1.1.1"
     },
