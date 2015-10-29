@@ -5,11 +5,12 @@ This is an example of examples on how to use [single-spa](https://github.com/joe
 - Babel
 - Angular
 - Bower
+- Webpack
 
 and there will soon be examples for
 
 - React
-- Webpack
+- React Router
 - Browserify
 - Apps on the Global object
 
