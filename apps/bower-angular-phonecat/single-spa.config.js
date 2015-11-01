@@ -1,4 +1,5 @@
 import { defaultAngular1App } from "single-spa-angular1";
+import menu from "single-spa-examples-menu";
 
 export const publicRoot = '/apps/bower-angular-phonecat/app';
 
@@ -9,4 +10,4 @@ const angular1App = defaultAngular1App({
 })
 
 export const pathToIndex = 'index.html';
-export const lifecycles = [angular1App];
+export const lifecycles = [menu(), angular1App];

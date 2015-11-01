@@ -1,5 +1,6 @@
 import { defaultAngular1App } from "single-spa-angular1";
 import { defaultJspmApp } from "single-spa-jspm";
+import menu from "single-spa-examples-menu";
 
 export const publicRoot = '/apps/jspm-with-angular-1.4.6';
 
@@ -10,4 +11,4 @@ const angular1App = defaultAngular1App({
 });
 
 export const pathToIndex = 'index.html';
-export const lifecycles = [angular1App, defaultJspmApp()];
+export const lifecycles = [menu(), angular1App, defaultJspmApp()];

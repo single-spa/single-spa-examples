@@ -1,8 +1,9 @@
 {
   "license": "MIT",
   "scripts": {
-    "setup": "npm install && jspm install npm:single-spa && jspm install npm:single-spa-angular1 && jspm install npm:single-spa-jspm && jspm install --unlink && npm run setup-apps",
+    "setup": "npm install && jspm install npm:single-spa && jspm install npm:single-spa-angular1 && jspm install npm:single-spa-jspm && jspm install --unlink && npm run setup-apps && npm run setup-menu",
     "setup-apps": "find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run setup'",
+    "setup-menu": "cd menu && jspm link npm:single-spa-examples-menu@latest -y && cd .. && jspm install npm:single-spa-examples-menu@latest --link",
     "prepare-surge": "npm run setup && find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run prepare-surge' && npm run bundle",
     "start": "http-server . -p 8000",
     "bundle": "jspm bundle bootstrap.js bootstrap.bundle.js --inject",
