@@ -6,13 +6,13 @@
     "prepare-surge": "npm run setup && find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run prepare-surge' && npm run bundle",
     "start": "http-server . -p 8000",
     "bundle": "jspm bundle bootstrap.js bootstrap.bundle.js --inject",
-    "linkSingleSpa": "cd ../single-spa && jspm link npm:single-spa@latest -y && cd ../single-spa-examples && jspm install npm:single-spa@latest --link",
+    "linkSingleSpa": "cd ../single-spa && npm run build && jspm link npm:single-spa@latest -y && cd ../single-spa-examples && jspm install npm:single-spa@latest --link",
     "linkSingleSpaJspm": "cd ../single-spa-jspm && jspm link npm:single-spa-jspm@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-jspm@latest --link",
     "linkSingleSpaAngular1": "cd ../single-spa-angular1 && jspm link npm:single-spa-angular1@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-angular1@latest --link"
   },
   "jspm": {
     "dependencies": {
-      "single-spa": "npm:single-spa@^1.2.2",
+      "single-spa": "npm:single-spa@^1.2.3",
       "single-spa-angular1": "npm:single-spa-angular1@^1.2.0",
       "single-spa-jspm": "npm:single-spa-jspm@^1.1.1"
     },
