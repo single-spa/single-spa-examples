@@ -2,17 +2,17 @@
 This is an example of examples on how to use [single-spa](https://github.com/joeldenning/single-spa) in a variety of contexts. Right now there are examples with the following technologies:
 
 - JSPM
+- Webpack
 - Babel
+- React
 - Angular
 - Bower
-- Webpack
+- Apps that leak globals
 
 and there will soon be examples for
 
-- React
 - React Router
 - Browserify
-- Apps on the Global object
 
 ## View the demo!
 A [demo is live](http://single-spa.surge.sh) on surge.sh. Don't be turned off by the lack of styling -- I'll be fixing that soon.
