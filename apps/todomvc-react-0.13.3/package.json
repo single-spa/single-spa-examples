@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+      "setup": "npm install",
+      "prepare-surge": "echo 'No special surge preparation required'"
+  },
   "dependencies": {
     "classnames": "^2.1.5",
     "director": "^1.2.0",
