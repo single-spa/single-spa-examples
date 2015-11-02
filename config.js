@@ -22,6 +22,7 @@ System.config({
     "single-spa-examples-menu": "npm:single-spa-examples-menu@latest",
     "single-spa-globals": "npm:single-spa-globals@1.0.0",
     "single-spa-jspm": "npm:single-spa-jspm@1.1.1",
+    "single-spa-react": "npm:single-spa-react@1.0.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
