@@ -5,3 +5,4 @@ declareChildApplication('/apps/jspm-with-angular-1.4.6/single-spa.config.js', ()
 declareChildApplication('/apps/bower-angular-phonecat/single-spa.config.js', () => window.location.pathname.startsWith('/phonecat'));
 declareChildApplication('/apps/webpack-with-angular-1.4.7/single-spa.config.js', () => window.location.pathname.startsWith('/webpack1'));
 declareChildApplication('/apps/another-webpack-with-angular-1.4.7/single-spa.config.js', () => window.location.pathname.startsWith('/webpack2'));
+declareChildApplication('/apps/todomvc-react-0.13.3/single-spa.config.js', () => window.location.pathname.startsWith('/todomvc-react'));
