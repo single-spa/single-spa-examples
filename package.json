@@ -3,8 +3,8 @@
   "scripts": {
     "setup": "npm install && jspm install npm:single-spa && jspm install npm:single-spa-angular1 && jspm install npm:single-spa-jspm && jspm install --unlink && npm run setup-apps && npm run setup-menu",
     "setup-apps": "find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run setup'",
-    "setup-menu": "cd menu && jspm link npm:single-spa-examples-menu@latest -y && cd .. && jspm install npm:single-spa-examples-menu@latest --link",
-    "prepare-surge": "npm run setup && find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run prepare-surge' && npm run bundle",
+    "setup-menu": "cd menu && jspm link npm:single-spa-examples-menu@latest -y && cd .. && jspm install npm:single-spa-examples-menu@latest --link -y && cp -R -L jspm_packages/npm/single-spa-examples-menu@latest . && rm -r jspm_packages/npm/single-spa-examples-menu@latest && mv ./single-spa-examples-menu@latest ./jspm_packages/npm/",
+    "prepare-surge": "npm run setup && find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run prepare-surge' && npm run bundle && npm run setup-menu",
     "start": "http-server . -p 8000",
     "bundle": "jspm bundle bootstrap.js bootstrap.bundle.js --inject",
     "linkSingleSpa": "cd ../single-spa && npm run build && jspm link npm:single-spa@latest -y && cd ../single-spa-examples && jspm install npm:single-spa@latest --link",
