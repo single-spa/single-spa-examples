@@ -12,6 +12,15 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  bundles: {
+    "entry.bundle.js": [
+      "entry.js",
+      "github:angular/bower-angular@1.3.0",
+      "github:angular-ui/ui-router@0.2.8",
+      "github:angular/bower-angular@1.3.0/angular.min",
+      "github:angular-ui/ui-router@0.2.8/release/angular-ui-router"
+    ]
+  },
 
   map: {
     "angular": "github:angular/bower-angular@1.3.0",

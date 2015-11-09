@@ -8,16 +8,11 @@ export const pathToIndex = 'index.html';
 const reactApp = defaultReactApp({
     rootElementGetter: function() {
         return document.querySelector('.todoapp');
+    },
+    mountApp: function() {
+        if (window.render) {
+            window.render();
+        }
     }
 });
-const appBootstrapper = {
-    applicationWasMounted: function() {
-        return new Promise((resolve) => {
-            if (window.render) {
-                window.render();
-            }
-            resolve();
-        });
-    }
-};
-export const lifecycles = [menu(), appWithGlobals(['React', 'Router', 'app', 'render']), reactApp, appBootstrapper];
+export const lifecycles = [menu(), appWithGlobals(['Router', 'app', 'render']), reactApp];

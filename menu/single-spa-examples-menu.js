@@ -20,6 +20,7 @@ export function showTopNav() {
             <li><a href="/webpack1">Webpack Angular 1.4.7 app</a></li>
             <li><a href="/webpack2">Another Webpack Angular 1.4.7 app</a></li>
             <li><a href="/todomvc-react">Todo MVC's React 0.13.3 app</a></li>
+            <li><a href="/react-router-huge-app">React Router's 'huge app' example</a></li>
         </ul>
     `, 'text/html');
     document.body.insertBefore(parsedDom.body.children[0], document.body.children[0]);

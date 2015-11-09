@@ -5,4 +5,4 @@ jspm_packages/
 npm-debug.log
 *.bundle.js
 *.bundle.js.map
-canopy/
+build/

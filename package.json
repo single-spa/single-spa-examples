@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
-    "setup": "npm install && jspm install npm:single-spa && jspm install npm:single-spa-angular1 && jspm install npm:single-spa-jspm && jspm install --unlink && npm run setup-apps && npm run setup-menu",
+    "setup": "npm install && jspm install npm:single-spa && jspm install npm:single-spa-angular1 && jspm install npm:single-spa-jspm && jspm install npm:single-spa-react && jspm install npm:single-spa-globals && jspm install --unlink && npm run setup-apps && npm run setup-menu",
     "setup-apps": "find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run setup'",
     "setup-menu": "cd menu && jspm link npm:single-spa-examples-menu@latest -y && cd .. && jspm install npm:single-spa-examples-menu@latest --link -y && cp -R -L jspm_packages/npm/single-spa-examples-menu@latest . && rm -r jspm_packages/npm/single-spa-examples-menu@latest && mv ./single-spa-examples-menu@latest ./jspm_packages/npm/",
     "prepare-surge": "npm run setup && find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run prepare-surge' && npm run bundle && npm run setup-menu",
@@ -15,11 +15,11 @@
   },
   "jspm": {
     "dependencies": {
-      "single-spa": "npm:single-spa@^1.2.4",
+      "single-spa": "npm:single-spa@^1.3.0",
       "single-spa-angular1": "npm:single-spa-angular1@^1.2.1",
       "single-spa-globals": "npm:single-spa-globals@^1.0.0",
       "single-spa-jspm": "npm:single-spa-jspm@^1.1.1",
-      "single-spa-react": "npm:single-spa-react@^1.0.0"
+      "single-spa-react": "npm:single-spa-react@^1.1.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.22",
@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "http-server": "^0.8.5",
-    "jspm": "^0.16.12"
+    "jspm": "^0.16.14"
   }
 }
