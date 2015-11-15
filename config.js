@@ -15,8 +15,8 @@ System.config({
   bundles: {
     "bootstrap.bundle.js": [
       "bootstrap.js",
-      "npm:single-spa@1.3.0",
-      "npm:single-spa@1.3.0/dist/single-spa"
+      "npm:single-spa@1.3.1",
+      "npm:single-spa@1.3.1/dist/single-spa"
     ]
   },
 
@@ -24,7 +24,7 @@ System.config({
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.25",
     "core-js": "npm:core-js@1.1.4",
-    "single-spa": "npm:single-spa@1.3.0",
+    "single-spa": "npm:single-spa@1.3.1",
     "single-spa-angular1": "npm:single-spa-angular1@1.2.1",
     "single-spa-examples-menu": "npm:single-spa-examples-menu@latest",
     "single-spa-globals": "npm:single-spa-globals@1.0.0",
@@ -63,7 +63,7 @@ System.config({
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
     },
-    "npm:single-spa@1.3.0": {
+    "npm:single-spa@1.3.1": {
       "es6-module-loader": "npm:es6-module-loader@0.17.7"
     },
     "npm:util@0.10.3": {
