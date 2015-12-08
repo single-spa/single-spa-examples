@@ -8,11 +8,7 @@ This is an example of examples on how to use [single-spa](https://github.com/joe
 - Angular
 - Bower
 - Apps that leak globals
-
-and there will soon be examples for
-
 - React Router
-- Browserify
 
 ## View the demo!
 A [demo is live](http://single-spa.surge.sh) on surge.sh. Don't be turned off by the lack of styling -- I'll be fixing that soon.
