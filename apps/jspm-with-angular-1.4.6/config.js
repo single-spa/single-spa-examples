@@ -15,8 +15,8 @@ System.config({
   bundles: {
     "entry.bundle.js": [
       "entry.js",
-      "github:angular/bower-angular@1.4.6",
       "github:angular-ui/ui-router@0.2.8",
+      "github:angular/bower-angular@1.4.6",
       "github:angular-ui/ui-router@0.2.8/release/angular-ui-router",
       "github:angular/bower-angular@1.4.6/angular"
     ]

@@ -15,8 +15,8 @@ System.config({
   bundles: {
     "bootstrap.bundle.js": [
       "bootstrap.js",
-      "npm:single-spa@1.3.1",
-      "npm:single-spa@1.3.1/dist/single-spa"
+      "npm:single-spa@1.3.4",
+      "npm:single-spa@1.3.4/dist/single-spa"
     ]
   },
 
@@ -24,7 +24,7 @@ System.config({
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.25",
     "core-js": "npm:core-js@1.1.4",
-    "single-spa": "npm:single-spa@1.3.1",
+    "single-spa": "npm:single-spa@1.3.4",
     "single-spa-angular1": "npm:single-spa-angular1@1.2.1",
     "single-spa-examples-menu": "npm:single-spa-examples-menu@latest",
     "single-spa-globals": "npm:single-spa-globals@1.0.0",
@@ -55,7 +55,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0",
-      "when": "npm:when@3.7.4"
+      "when": "npm:when@3.7.5"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
@@ -63,14 +63,14 @@ System.config({
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
     },
-    "npm:single-spa@1.3.1": {
+    "npm:single-spa@1.3.4": {
       "es6-module-loader": "npm:es6-module-loader@0.17.7"
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:when@3.7.4": {
+    "npm:when@3.7.5": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }
