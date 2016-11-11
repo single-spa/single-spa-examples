@@ -1,0 +1,9 @@
+#!/usr/bin/env bash -e
+
+./node_modules/jspm/jspm.js build \
+	single-spa-examples \
+	build/single-spa-examples.js \
+	--format amd \
+	--source-map-contents \
+	--skip-rollup \
+	"$@"

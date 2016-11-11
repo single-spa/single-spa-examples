@@ -1,0 +1,11 @@
+#!/usr/bin/env bash -e
+
+rm -rf build
+
+./bin/build-root
+./bin/build-common-deps
+
+./bin/build-home
+./bin/build-navbar
+./bin/build-angular1
+./bin/build-react

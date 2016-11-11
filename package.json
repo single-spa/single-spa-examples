@@ -1,34 +1,112 @@
 {
-  "license": "MIT",
+  "name": "single-spa-examples",
+  "version": "1.0.0",
+  "description": "This is an example of examples on how to use [single-spa](https://github.com/joeldenning/single-spa) in a variety of contexts. Right now there are examples with the following technologies:",
   "scripts": {
-    "setup": "npm install && jspm install npm:single-spa && jspm install npm:single-spa-angular1 && jspm install npm:single-spa-jspm && jspm install npm:single-spa-react && jspm install npm:single-spa-globals && jspm install --unlink && npm run setup-apps && npm run setup-menu",
-    "setup-apps": "find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run setup'",
-    "setup-menu": "cd menu && jspm link npm:single-spa-examples-menu@latest -y && cd .. && jspm install npm:single-spa-examples-menu@latest --link -y && cp -R -L jspm_packages/npm/single-spa-examples-menu@latest . && rm -r jspm_packages/npm/single-spa-examples-menu@latest && mv ./single-spa-examples-menu@latest ./jspm_packages/npm/",
-    "prepare-surge": "npm run setup && find ./apps -maxdepth 1 -mindepth 1 -type d | xargs -n1 sh -c 'cd $0 && npm run prepare-surge' && npm run bundle && npm run setup-menu",
-    "start": "http-server . -p 8000",
-    "bundle": "jspm bundle bootstrap.js bootstrap.bundle.js --inject",
-    "linkSingleSpa": "jspm unbundle && cd ../single-spa && npm run build && jspm link npm:single-spa@latest -y && cd ../single-spa-examples && jspm install npm:single-spa@latest --link",
-    "linkSingleSpaJspm": "jspm unbundle && cd ../single-spa-jspm && jspm link npm:single-spa-jspm@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-jspm@latest --link",
-    "linkSingleSpaAngular1": "jspm unbundle && cd ../single-spa-angular1 && jspm link npm:single-spa-angular1@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-angular1@latest --link",
-    "linkSingleSpaGlobals": "jspm unbundle && cd ../single-spa-globals && npm run build && jspm link npm:single-spa-globals@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-globals@latest --link",
-    "linkSingleSpaReact": "jspm unbundle && cd ../single-spa-react && npm run build && jspm link npm:single-spa-react@latest -y && cd ../single-spa-examples && jspm install npm:single-spa-react@latest --link"
+    "postinstall": "jspm install && npm run build",
+    "start": "http-server",
+    "build": "./bin/build-code",
+    "build-home": "./bin/build-home -dw",
+    "build-common-deps": "./bin/build-common-deps -dw",
+    "build-navbar": "./bin/build-navbar -dw",
+    "build-root": "./bin/build-root -dw",
+    "build-angular1": "./bin/build-angular1 -dw",
+    "build-react": "./bin/build-react -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeldenning/single-spa-examples.git"
+  },
+  "author": "Joel Denning",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/joeldenning/single-spa-examples/issues"
+  },
+  "homepage": "https://github.com/joeldenning/single-spa-examples#readme",
+  "devDependencies": {
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "http-server": "^0.9.0",
+    "jspm": "^0.17.0-beta.32",
+    "react-router": "^3.0.0",
+    "single-spa-react": "^2.0.3",
+    "webpack": "^1.13.3"
   },
   "jspm": {
+    "name": "single-spa-examples",
+    "main": "single-spa-examples.js",
     "dependencies": {
-      "single-spa": "npm:single-spa@1.3.4",
-      "single-spa-angular1": "npm:single-spa-angular1@^1.2.1",
-      "single-spa-globals": "npm:single-spa-globals@^1.0.0",
-      "single-spa-jspm": "npm:single-spa-jspm@^1.1.1",
-      "single-spa-react": "npm:single-spa-react@^1.1.0"
+      "angular-ui-router": "npm:angular-ui-router@^1.0.0-beta.2",
+      "aphrodite": "npm:aphrodite@^1.1.0",
+      "react-dom": "npm:react-dom@^15.3.2",
+      "single-spa": "npm:single-spa@^3.1.0",
+      "single-spa-angular1": "npm:single-spa-angular1@^2.2.3",
+      "single-spa-react": "npm:single-spa-react@^2.0.3",
+      "text": "github:systemjs/plugin-text@^0.0.9"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.22",
-      "babel-runtime": "npm:babel-runtime@^5.8.20",
-      "core-js": "npm:core-js@^1.1.0"
+      "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.8.0",
+      "core-js": "npm:core-js@^2.4.1",
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.15"
+    },
+    "peerDependencies": {
+      "angular": "npm:angular@^1.5.8",
+      "assert": "npm:jspm-nodelibs-assert@^0.2.0",
+      "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
+      "child_process": "npm:jspm-nodelibs-child_process@^0.2.0",
+      "constants": "npm:jspm-nodelibs-constants@^0.2.0",
+      "crypto": "npm:jspm-nodelibs-crypto@^0.2.0",
+      "domain": "npm:jspm-nodelibs-domain@^0.2.0",
+      "events": "npm:jspm-nodelibs-events@^0.2.0",
+      "fs": "npm:jspm-nodelibs-fs@^0.2.0",
+      "http": "npm:jspm-nodelibs-http@^0.2.0",
+      "https": "npm:jspm-nodelibs-https@^0.2.0",
+      "os": "npm:jspm-nodelibs-os@^0.2.0",
+      "path": "npm:jspm-nodelibs-path@^0.2.0",
+      "process": "npm:jspm-nodelibs-process@^0.2.0",
+      "react": "npm:react@^15.3.2",
+      "stream": "npm:jspm-nodelibs-stream@^0.2.0",
+      "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
+      "url": "npm:jspm-nodelibs-url@^0.2.0",
+      "util": "npm:jspm-nodelibs-util@^0.2.0",
+      "vm": "npm:jspm-nodelibs-vm@^0.2.0",
+      "zlib": "npm:jspm-nodelibs-zlib@^0.2.0"
+    },
+    "overrides": {
+      "npm:angular@1.5.8": {
+        "format": "global",
+        "jspmNodeConversion": false,
+        "main": "angular",
+        "meta": {
+          "angular.js": {
+            "exports": "angular",
+            "format": "global"
+          }
+        }
+      },
+      "npm:browserify-zlib@0.1.4": {
+        "dependencies": {
+          "readable-stream": "^2.0.2",
+          "pako": "~0.2.0"
+        },
+        "map": {
+          "_stream_transform": "readable-stream/transform"
+        }
+      },
+      "npm:inherits@2.0.3": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:lodash@4.16.2": {
+        "map": {
+          "buffer": "@empty",
+          "process": "@empty"
+        }
+      }
     }
-  },
-  "devDependencies": {
-    "http-server": "^0.8.5",
-    "jspm": "^0.16.14"
   }
 }

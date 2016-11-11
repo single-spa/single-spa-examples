@@ -1,0 +1,10 @@
+#!/usr/bin/env bash -e
+
+./node_modules/jspm/jspm.js build \
+	src/angular1/angular1.app.js \
+	- angular \
+	build/angular1.app.js \
+	--format amd \
+	--source-map-contents \
+	--skip-rollup \
+	"$@"

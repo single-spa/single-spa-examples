@@ -1,0 +1,13 @@
+<div style="padding-top: 20px">
+	<h4 class="light">
+		Ping pong gifs
+	</h4>
+	<p>
+	</p>
+	<div ng-repeat="gif in vm.gifs" style="margin: 5px;">
+		<img
+			ng-src="{{gif.images.downsized_medium.url}}"
+			class="col l3"
+		>
+	</div>
+</div>

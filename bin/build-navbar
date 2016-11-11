@@ -1,0 +1,11 @@
+#!/usr/bin/env bash -e
+
+./node_modules/jspm/jspm.js build \
+	src/navbar/navbar.app.js \
+	- react \
+	- react-dom \
+	build/navbar.app.js \
+	--format amd \
+	--source-map-contents \
+	--skip-rollup \
+	"$@"

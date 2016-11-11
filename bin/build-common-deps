@@ -1,0 +1,10 @@
+#!/usr/bin/env bash -e
+
+jspm bundle \
+	react \
+	+ react-dom \
+	+ angular \
+	build/common-deps.js \
+	--source-map-contents \
+	--skip-rollup \
+	"$@"

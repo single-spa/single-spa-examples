@@ -1,0 +1,5 @@
+#!/usr/bin/env bash -e
+
+./node_modules/webpack/bin/webpack.js \
+	--config src/react/webpack.config.js \
+	"$@"
