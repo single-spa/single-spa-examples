@@ -20,5 +20,5 @@ git clone git@github.com:joeldenning/single-spa-examples.git
 cd single-spa-examples
 npm install
 npm start
-open localhost:8000
+open localhost:8080
 ```
