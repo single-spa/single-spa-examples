@@ -20,13 +20,12 @@ export default class Technology extends React.Component {
 					<div className="card-content">
 						<span className="card-title grey-text text-darken-4 activator">
 							{cardTitle}
-							<i className="material-icons right">more_vert</i>
 						</span>
-						<p>
-							<a href={href}>
-								Go to example
+						<div>
+							<a className="activator" style={{cursor: 'pointer'}}>
+								Show me an example
 							</a>
-						</p>
+						</div>
 					</div>
 					<div className="card-reveal">
 						<span className="card-title grey-text text-darken-4 activator">
