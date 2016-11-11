@@ -1,2 +1,4 @@
-!bower_components
-!apps/todomvc-react-0.13.3/node_modules
+jspm_packages
+node_modules
+bin
+src
