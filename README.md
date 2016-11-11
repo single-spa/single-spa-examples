@@ -19,7 +19,6 @@ A [demo is live](http://single-spa.surge.sh) on surge.sh.
 git clone git@github.com:joeldenning/single-spa-examples.git
 cd single-spa-examples
 npm install
-npm run build
 npm start
 open localhost:8000
 ```
