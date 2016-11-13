@@ -17,7 +17,7 @@ A [demo is live](http://single-spa.surge.sh) on surge.sh.
 
 ## How to get the examples running locally
 ```
-git clone git@github.com:joeldenning/single-spa-examples.git
+git clone git@github.com:CanopyTax/single-spa-examples.git
 cd single-spa-examples
 npm install
 npm start
