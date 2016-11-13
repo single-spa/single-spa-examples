@@ -10,8 +10,7 @@ This is an example of examples on how to use [single-spa](https://github.com/joe
 - JSPM
 - Webpack
 - Babel
-
-And we're working on an example for Angular 2.
+- Angular 2
 
 ## View the demo!
 A [demo is live](http://single-spa.surge.sh) on surge.sh.
