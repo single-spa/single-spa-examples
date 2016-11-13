@@ -13,3 +13,4 @@ cp jspm_packages/system-polyfills.src.js build/system-polyfills.src.js
 ./bin/build-navbar
 ./bin/build-angular1
 ./bin/build-react
+./bin/build-angular2

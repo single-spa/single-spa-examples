@@ -11,7 +11,8 @@
     "build-navbar": "./bin/build-navbar -dw",
     "build-root": "./bin/build-root -dw",
     "build-angular1": "./bin/build-angular1 -dw",
-    "build-react": "./bin/build-react -w"
+    "build-react": "./bin/build-react -w",
+    "build-angular2": "./bin/build-angular2 -dw"
   },
   "repository": {
     "type": "git",
@@ -39,13 +40,17 @@
     "name": "single-spa-examples",
     "main": "single-spa-examples.js",
     "dependencies": {
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.1.2",
       "angular-ui-router": "npm:angular-ui-router@^1.0.0-beta.2",
       "aphrodite": "npm:aphrodite@^1.1.0",
       "react-dom": "npm:react-dom@^15.3.2",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.8",
       "single-spa": "npm:single-spa@^3.1.0",
       "single-spa-angular1": "npm:single-spa-angular1@^2.2.3",
+      "single-spa-angular2": "npm:single-spa-angular2@^1.0.0",
       "single-spa-react": "npm:single-spa-react@^2.0.3",
-      "text": "github:systemjs/plugin-text@^0.0.9"
+      "text": "github:systemjs/plugin-text@^0.0.9",
+      "ts": "github:frankwallis/plugin-typescript@^5.2.9"
     },
     "devDependencies": {
       "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.8.0",
@@ -53,6 +58,10 @@
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.15"
     },
     "peerDependencies": {
+      "@angular/common": "npm:@angular/common@2.1.2",
+      "@angular/compiler": "npm:@angular/compiler@2.1.2",
+      "@angular/core": "npm:@angular/core@^2.1.2",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.1.2",
       "angular": "npm:angular@^1.5.8",
       "assert": "npm:jspm-nodelibs-assert@^0.2.0",
       "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
@@ -64,18 +73,93 @@
       "fs": "npm:jspm-nodelibs-fs@^0.2.0",
       "http": "npm:jspm-nodelibs-http@^0.2.0",
       "https": "npm:jspm-nodelibs-https@^0.2.0",
+      "module": "npm:jspm-nodelibs-module@^0.2.0",
+      "net": "npm:jspm-nodelibs-net@^0.2.0",
       "os": "npm:jspm-nodelibs-os@^0.2.0",
       "path": "npm:jspm-nodelibs-path@^0.2.0",
       "process": "npm:jspm-nodelibs-process@^0.2.0",
       "react": "npm:react@^15.3.2",
+      "rxjs": "npm:rxjs@5.0.0-beta.12",
       "stream": "npm:jspm-nodelibs-stream@^0.2.0",
       "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
+      "timers": "npm:jspm-nodelibs-timers@^0.2.0",
       "url": "npm:jspm-nodelibs-url@^0.2.0",
       "util": "npm:jspm-nodelibs-util@^0.2.0",
       "vm": "npm:jspm-nodelibs-vm@^0.2.0",
-      "zlib": "npm:jspm-nodelibs-zlib@^0.2.0"
+      "zlib": "npm:jspm-nodelibs-zlib@^0.2.0",
+      "zone.js": "npm:zone.js@^0.6.21"
     },
     "overrides": {
+      "npm:@angular/common@2.1.2": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/common": ".",
+          "./testing": "./bundles/common-testing.umd.js"
+        }
+      },
+      "npm:@angular/compiler@2.1.2": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/compiler": ".",
+          "./testing": "./bundles/compiler-testing.umd.js"
+        }
+      },
+      "npm:@angular/core@2.1.2": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/core": ".",
+          "./testing": "./bundles/core-testing.umd.js"
+        }
+      },
+      "npm:@angular/platform-browser-dynamic@2.1.2": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/platform-browser-dynamic": ".",
+          "./testing": "./bundles/platform-browser-dynamic-testing.umd.js"
+        }
+      },
+      "npm:@angular/platform-browser@2.1.2": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/platform-browser": ".",
+          "./testing": "./bundles/platform-browser-testing.umd.js"
+        }
+      },
       "npm:angular@1.5.8": {
         "format": "global",
         "jspmNodeConversion": false,
@@ -105,6 +189,29 @@
         "map": {
           "buffer": "@empty",
           "process": "@empty"
+        }
+      },
+      "npm:reflect-metadata@0.1.8": {
+        "jspmNodeConversion": false,
+        "map": {
+          "crypto": {
+            "node": "@node/crypto",
+            "default": "@empty"
+          }
+        }
+      },
+      "npm:typescript@2.1.1": {
+        "browser": {},
+        "map": {
+          "buffer": "@empty",
+          "child_process": "@empty",
+          "fs": "@empty",
+          "path": "@empty",
+          "process": "@empty",
+          "readline": "@empty"
+        },
+        "dependencies": {
+          "source-map-support": "*"
         }
       }
     }

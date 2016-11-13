@@ -43,7 +43,7 @@ export default function HomeRoot() {
 							imgSrc="https://angular.io/resources/images/logos/standard/logo-nav.png"
 							imgBackgroundColor="#1976D2"
 							cardTitle="Angular 2"
-							href="javascript:alert('coming soon')"
+							href="/#/angular2"
 							explanation={`Angular 2 is compatible with single-spa, we just haven't built an example for it yet.`}
 						/>
 					</div>

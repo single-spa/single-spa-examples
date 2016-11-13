@@ -1,0 +1,9 @@
+#!/usr/bin/env bash -e
+
+./node_modules/jspm/jspm.js build \
+	src/angular2/angular2.app.js \
+	build/angular2.app.js \
+	--format amd \
+	--source-map-contents \
+	--skip-rollup \
+	"$@"

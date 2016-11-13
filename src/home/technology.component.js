@@ -12,7 +12,7 @@ export default class Technology extends React.Component {
 			imgStyles.backgroundColor = imgBackgroundColor;
 		}
 		return (
-			<div className="col l3">
+			<div className="col s7 m3 l3">
 				<div className="card">
 					<div className="card-image" style={imgStyles}>
 						<img className="activator" src={imgSrc} style={{maxHeight: '150px'}} />
