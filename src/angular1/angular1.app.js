@@ -1,5 +1,4 @@
 import singleSpaAngular1 from 'single-spa-angular1';
-import coloredBorder from '../colored-border.js';
 import angular from 'angular';
 import './app.module.js';
 import './routes.js';
@@ -13,10 +12,6 @@ const angularLifecycles = singleSpaAngular1({
 	uiRouter: true,
 	preserveGlobal: true,
 });
-
-const coloredBorderLifecycles = coloredBorder({
-	domElementGetter
-})
 
 export const bootstrap = [
 	angularLifecycles.bootstrap,
