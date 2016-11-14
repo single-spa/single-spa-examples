@@ -6,3 +6,4 @@ npm-debug.log
 *.bundle.js
 *.bundle.js.map
 build/
+.idea
