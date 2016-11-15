@@ -23,7 +23,9 @@ export default class FrameworkInspectorModal extends React.Component {
 						Framework inspector
 					</h4>
 					<p>
-						The framework inspector blah blah blah
+						The framework inspector is a way to see which part of the app is built with which framework.
+						You can click on the framework inspector to turn on and off colored borders around portions of the page,
+						with the name of the framework shown at the top left of the border.
 					</p>
 				</div>
 				<div className="modal-footer">
