@@ -15,6 +15,7 @@ module.exports = {
 	externals: {
 		react: 'react',
 		'react-dom': 'react-dom',
+		'common/colored-border.js': 'common/colored-border.js',
 	},
 	module: {
 		loaders: [
