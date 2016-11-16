@@ -60,6 +60,13 @@ export default class HomeRoot extends React.Component {
 								href="/#/angular2"
 								explanation={`Angular 2 is compatible with single-spa, we just haven't built an example for it yet.`}
 							/>
+							<Technology
+								imgSrc="https://vuejs.org/images/logo.png"
+								imgBackgroundColor="#f8f8f8"
+								cardTitle="Vue.js"
+								href="/#/vue"
+								explanation={`Vue.js is compatible with single-spa. Easily get started with the single-spa-vue plugin.`}
+							/>
 						</div>
 					</div>
 					<div className="row">

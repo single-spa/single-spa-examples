@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
+set -e
 
 ./node_modules/webpack/bin/webpack.js \
 	--config src/react/webpack.config.js \

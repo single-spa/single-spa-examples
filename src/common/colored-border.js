@@ -7,6 +7,7 @@ export function getBorder(framework) {
 		react: '#61dafb',
 		angular1: '#A6120D',
 		angular2: '#26a69a',
+		vue: 'yellow',
 	};
 
 	const color = colors[framework] || 'rgb(66, 133, 244)';
