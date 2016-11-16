@@ -2,6 +2,7 @@ SystemJS.config({
   paths: {
     "npm:": "jspm_packages/npm/",
     "github:": "jspm_packages/github/",
+    "common/": "src/common/",
     "single-spa-examples/": "src/"
   },
   browserConfig: {
@@ -24,7 +25,7 @@ SystemJS.config({
         },
         "*.html": {
           "loader": "text"
-        }
+        },
       }
     }
   }
@@ -64,6 +65,7 @@ SystemJS.config({
     "react": "npm:react@15.3.2",
     "react-dom": "npm:react-dom@15.3.2",
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
+    "rx": "npm:rx@4.1.0",
     "rxjs": "npm:rxjs@5.0.0-beta.12",
     "single-spa": "npm:single-spa@3.1.1",
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",

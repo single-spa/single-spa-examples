@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, hashHistory } from 'react-router'
 import useBasename from 'history/lib/useBasename';
+import { showFrameworkObservable, getBorder } from 'common/colored-border.js';
 
 import './stubs/COURSES'
 
@@ -20,13 +21,30 @@ const rootRoute = {
 }
 
 export default class Root extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			frameworkInspector: false,
+		};
+	}
+	componentWillMount() {
+		this.subscription = showFrameworkObservable.subscribe(newValue => this.setState({frameworkInspector: newValue}));
+	}
 	render() {
 		return (
-			<Router
-				history={hashHistory}
-				routes={rootRoute}
-			/>
+			<div style={this.state.frameworkInspector ? {border: getBorder('react')} : {}}>
+				{this.state.frameworkInspector &&
+					<div>(built with React)</div>
+				}
+				<Router
+					history={hashHistory}
+					routes={rootRoute}
+				/>
+			</div>
 		);
+	}
+	componentWillUnmount() {
+		this.subscription.dispose();
 	}
 }
 

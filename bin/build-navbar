@@ -5,6 +5,7 @@ set -e
 	src/navbar/navbar.app.js \
 	- react \
 	- react-dom \
+	- common/colored-border.js \
 	build/navbar.app.js \
 	--format amd \
 	--source-map-contents \

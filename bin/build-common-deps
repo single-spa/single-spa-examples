@@ -5,6 +5,7 @@ jspm bundle \
 	react \
 	+ react-dom \
 	+ angular \
+	+ common/colored-border.js \
 	build/common-deps.js \
 	--source-map-contents \
 	--skip-rollup \
