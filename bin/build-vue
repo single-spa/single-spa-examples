@@ -2,10 +2,8 @@
 set -e
 
 ./node_modules/jspm/jspm.js build \
-	src/navbar/navbar.app.js \
-	- react \
-	- react-dom \
-	build/navbar.app.js \
+	src/vue/vue.app.js \
+	build/vue.app.js \
 	--format amd \
 	--source-map-contents \
 	--skip-rollup \

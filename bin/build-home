@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
+set -e
 
 ./node_modules/jspm/jspm.js build \
 	src/home/home.app.js \

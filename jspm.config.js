@@ -50,6 +50,7 @@ SystemJS.config({
     "child_process": "npm:jspm-nodelibs-child_process@0.2.0",
     "constants": "npm:jspm-nodelibs-constants@0.2.0",
     "crypto": "npm:jspm-nodelibs-crypto@0.2.0",
+    "css": "github:systemjs/plugin-css@0.1.32",
     "domain": "npm:jspm-nodelibs-domain@0.2.0",
     "events": "npm:jspm-nodelibs-events@0.2.0",
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
@@ -68,6 +69,7 @@ SystemJS.config({
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",
     "single-spa-angular2": "npm:single-spa-angular2@1.0.0",
     "single-spa-react": "npm:single-spa-react@2.0.3",
+    "single-spa-vue": "npm:single-spa-vue@0.0.3",
     "stream": "npm:jspm-nodelibs-stream@0.2.0",
     "string_decoder": "npm:jspm-nodelibs-string_decoder@0.2.0",
     "text": "github:systemjs/plugin-text@0.0.9",
@@ -76,6 +78,7 @@ SystemJS.config({
     "url": "npm:jspm-nodelibs-url@0.2.0",
     "util": "npm:jspm-nodelibs-util@0.2.1",
     "vm": "npm:jspm-nodelibs-vm@0.2.0",
+    "vue": "npm:vue@2.0.5",
     "zlib": "npm:jspm-nodelibs-zlib@0.2.0",
     "zone.js": "npm:zone.js@0.6.26"
   },

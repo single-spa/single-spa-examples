@@ -57,6 +57,11 @@ function menuItems() {
 					Angular 2
 				</a>
 			</li>
+			<li>
+				<a href="#/vue">
+					Vue.js
+				</a>
+			</li>
 		</div>
 	)
 }

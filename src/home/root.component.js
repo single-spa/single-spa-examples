@@ -44,7 +44,14 @@ export default function HomeRoot() {
 							imgBackgroundColor="#1976D2"
 							cardTitle="Angular 2"
 							href="/#/angular2"
-							explanation={`Angular 2 is compatible with single-spa, we just haven't built an example for it yet.`}
+							explanation={`Angular 2 is compatible with single-spa. Easily get started with the single-spa-angular2 plugin.`}
+						/>
+						<Technology
+							imgSrc="https://vuejs.org/images/logo.png"
+							imgBackgroundColor="#f8f8f8"
+							cardTitle="Vue.js"
+							href="/#/vue"
+							explanation={`Vue.js is compatible with single-spa. Easily get started with the single-spa-vue plugin.`}
 						/>
 					</div>
 				</div>
