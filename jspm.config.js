@@ -26,7 +26,7 @@ SystemJS.config({
         },
         "*.html": {
           "loader": "text"
-        },
+        }
       }
     }
   }
@@ -68,7 +68,7 @@ SystemJS.config({
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
     "rx": "npm:rx@4.1.0",
     "rxjs": "npm:rxjs@5.0.0-beta.12",
-    "single-spa": "npm:single-spa@3.1.1",
+    "single-spa": "npm:single-spa@3.2.3",
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",
     "single-spa-angular2": "npm:single-spa-angular2@1.0.0",
     "single-spa-react": "npm:single-spa-react@2.0.3",
@@ -142,7 +142,7 @@ SystemJS.config({
     },
     "npm:stream-browserify@2.0.1": {
       "map": {
-        "readable-stream": "npm:readable-stream@2.2.1",
+        "readable-stream": "npm:readable-stream@2.2.2",
         "inherits": "npm:inherits@2.0.3"
       }
     },
@@ -355,11 +355,6 @@ SystemJS.config({
         "http-browserify": "npm:stream-http@2.4.0"
       }
     },
-    "npm:single-spa@3.1.1": {
-      "map": {
-        "custom-event": "npm:custom-event@1.0.1"
-      }
-    },
     "npm:aphrodite@1.1.0": {
       "map": {
         "asap": "npm:asap@2.0.5",
@@ -404,17 +399,6 @@ SystemJS.config({
         "minimalistic-assert": "npm:minimalistic-assert@1.0.0"
       }
     },
-    "npm:readable-stream@2.2.1": {
-      "map": {
-        "isarray": "npm:isarray@1.0.0",
-        "inherits": "npm:inherits@2.0.3",
-        "string_decoder": "npm:string_decoder@0.10.31",
-        "core-util-is": "npm:core-util-is@1.0.2",
-        "buffer-shims": "npm:buffer-shims@1.0.0",
-        "process-nextick-args": "npm:process-nextick-args@1.0.7",
-        "util-deprecate": "npm:util-deprecate@1.0.2"
-      }
-    },
     "npm:rxjs@5.0.0-beta.12": {
       "map": {
         "symbol-observable": "npm:symbol-observable@1.0.4"
@@ -428,6 +412,17 @@ SystemJS.config({
     "npm:timers-browserify@1.4.2": {
       "map": {
         "process": "npm:process@0.11.9"
+      }
+    },
+    "npm:readable-stream@2.2.2": {
+      "map": {
+        "isarray": "npm:isarray@1.0.0",
+        "inherits": "npm:inherits@2.0.3",
+        "string_decoder": "npm:string_decoder@0.10.31",
+        "process-nextick-args": "npm:process-nextick-args@1.0.7",
+        "core-util-is": "npm:core-util-is@1.0.2",
+        "buffer-shims": "npm:buffer-shims@1.0.0",
+        "util-deprecate": "npm:util-deprecate@1.0.2"
       }
     }
   }
