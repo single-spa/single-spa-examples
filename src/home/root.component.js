@@ -42,27 +42,27 @@ export default class HomeRoot extends React.Component {
 						</p>
 						<div className="row">
 							<Technology
-								imgSrc="https://blog.dashlane.com/wp-content/uploads/2016/02/react-logo-2.png"
+								imgSrc="https://facebook.github.io/react/img/logo.svg"
+								imgBackgroundColor="#222222"
 								cardTitle="React"
 								href="/#/react"
 								explanation={`Yep we've got a React example. We actually just borrowed it from the react-router examples, to show how easy it is to migrate an existing app into single-spa`}
 							/>
 							<Technology
-								imgSrc="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSv5a746ZzdFnCWN6Eo0ESIMf5QvoB9tFk0bWjgEXnt-7bHh4Djyw"
+								imgSrc="https://angularjs.org/img/ng-logo.png"
 								cardTitle="Angular 1"
 								href="/#/angular1"
 								explanation={`Angular 1 has some quirks, but works just fine when you use the single-spa-angular1 npm library to help you set up your app`}
 							/>
 							<Technology
-								imgSrc="https://angular.io/resources/images/logos/standard/logo-nav.png"
+								imgSrc="https://angular.io/resources/images/logos/angular2/angular.svg"
 								imgBackgroundColor="#1976D2"
 								cardTitle="Angular 2"
 								href="/#/angular2"
-								explanation={`Angular 2 is compatible with single-spa, we just haven't built an example for it yet.`}
+								explanation={`Angular 2 is compatible with single-spa, check out a simple 'Hello World' in the example.`}
 							/>
 							<Technology
 								imgSrc="https://vuejs.org/images/logo.png"
-								imgBackgroundColor="#f8f8f8"
 								cardTitle="Vue.js"
 								href="/#/vue"
 								explanation={`Vue.js is compatible with single-spa. Easily get started with the single-spa-vue plugin.`}
@@ -78,13 +78,13 @@ export default class HomeRoot extends React.Component {
 						</p>
 						<div className="row">
 							<Technology
-								imgSrc="http://cdn2.hubspot.net/hubfs/339703/webpack_logo.jpg"
+								imgSrc="https://webpack.js.org/2baa77d6015e6de6adf1ffa247530568.svg"
 								cardTitle="Webpack"
 								href="/#/react"
 								explanation={`The React example is built with Webpack, and even uses require.ensure for extra lazy loading.`}
 							/>
 							<Technology
-								imgSrc="http://getkickstrap.com.s3-website-us-east-1.amazonaws.com/img/jspm.png"
+								imgSrc="https://avatars3.githubusercontent.com/u/3802108?v=3&s=200"
 								cardTitle="jspm/SystemJS"
 								href="/#/angular1"
 								explanation={`The navbar app, home app, and Angular 1 app are all built with JSPM / SystemJS.`}
