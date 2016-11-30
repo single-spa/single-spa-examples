@@ -7,15 +7,16 @@ export default class Technology extends React.Component {
 			height: '150px',
 			display: 'flex',
 			alignItems: 'center',
+			justifyContent: 'center',
 		};
-		if (imgBackgroundColor) {
-			imgStyles.backgroundColor = imgBackgroundColor;
-		}
+
+		imgStyles.backgroundColor = imgBackgroundColor || '#fafafa';
+
 		return (
 			<div className="col s7 m3 l3">
 				<div className="card">
 					<div className="card-image" style={imgStyles}>
-						<img className="activator" src={imgSrc} style={{maxHeight: '150px'}} />
+						<img className="activator" src={imgSrc} height="125" style={{maxHeight: '150px', width: 'initial'}} />
 					</div>
 					<div className="card-content">
 						<span className="card-title grey-text text-darken-4 activator">
