@@ -82,6 +82,11 @@ function menuItems() {
 					Vue.js
 				</a>
 			</li>
+			<li>
+				<a href="#/svelte">
+					Svelte
+				</a>
+			</li>
 		</div>
 	)
 }

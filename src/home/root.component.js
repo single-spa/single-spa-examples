@@ -67,6 +67,12 @@ export default class HomeRoot extends React.Component {
 								href="/#/vue"
 								explanation={`Vue.js is compatible with single-spa. Easily get started with the single-spa-vue plugin.`}
 							/>
+							<Technology
+								imgSrc="/images/svelte.jpg"
+								cardTitle="Svelte"
+								href="/#/svelte"
+								explanation={`Svelte is compatible with single-spa. Easily get started with the single-spa-svelte plugin.`}
+							/>
 						</div>
 					</div>
 					<div className="row">
