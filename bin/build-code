@@ -16,3 +16,4 @@ cp jspm_packages/system-polyfills.src.js build/system-polyfills.src.js
 ./bin/build-react
 ./bin/build-angular2
 ./bin/build-vue
+./bin/build-svelte

@@ -72,6 +72,7 @@ SystemJS.config({
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",
     "single-spa-angular2": "npm:single-spa-angular2@1.0.0",
     "single-spa-react": "npm:single-spa-react@2.0.3",
+    "single-spa-svelte": "npm:single-spa-svelte@0.1.0",
     "single-spa-vue": "npm:single-spa-vue@0.0.3",
     "stream": "npm:jspm-nodelibs-stream@0.2.0",
     "string_decoder": "npm:jspm-nodelibs-string_decoder@0.2.0",
