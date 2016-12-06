@@ -11,6 +11,8 @@ This is an example of examples on how to use [single-spa](https://github.com/joe
 - Webpack
 - Babel
 - Angular 2
+- Vue
+- Svelte
 
 ## View the demo!
 A [demo is live](http://single-spa.surge.sh) on surge.sh.
