@@ -3,6 +3,7 @@ set -e
 
 ./node_modules/jspm/jspm.js build \
 	single-spa-examples \
+	- single-spa \
 	build/single-spa-examples.js \
 	--format amd \
 	--source-map-contents \
