@@ -4,7 +4,6 @@ set -e
 rm -rf build
 mkdir build
 
-cp CORS build/CORS
 cp jspm_packages/system.src.js build/system.src.js
 cp jspm_packages/system-polyfills.src.js build/system-polyfills.src.js
 
