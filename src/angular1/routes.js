@@ -1,5 +1,5 @@
 import angular from 'angular';
-import './base.component.js';
+import './root.component.js';
 import './gifs.component.js';
 import './lorem-ipsum.component.js';
 
@@ -12,17 +12,17 @@ angular
 	});
 
 	$stateProvider
-	.state('base', {
+	.state('root', {
 		url: '/angular1',
-		template: '<base />',
+		template: '<root />',
 	})
 
-	.state('base.gifs', {
+	.state('root.gifs', {
 		url: '/gifs',
 		template: '<gifs />',
 	})
 
-	.state('base.lorem-ipsum', {
+	.state('root.lorem-ipsum', {
 		url: '/lorem-ipsum',
 		template: '<lorem-ipsum />',
 	})

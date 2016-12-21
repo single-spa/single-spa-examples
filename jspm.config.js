@@ -68,7 +68,7 @@ SystemJS.config({
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
     "rx": "npm:rx@4.1.0",
     "rxjs": "npm:rxjs@5.0.0-beta.12",
-    "single-spa": "npm:single-spa@3.2.3",
+    "single-spa": "npm:single-spa@3.4.0",
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",
     "single-spa-angular2": "npm:single-spa-angular2@1.0.0",
     "single-spa-react": "npm:single-spa-react@2.0.3",

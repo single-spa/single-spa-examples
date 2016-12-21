@@ -48,7 +48,7 @@
       "react-dom": "npm:react-dom@^15.3.2",
       "reflect-metadata": "npm:reflect-metadata@^0.1.8",
       "rx": "npm:rx@^4.1.0",
-      "single-spa": "npm:single-spa@^3.2.3",
+      "single-spa": "npm:single-spa@^3.4.0",
       "single-spa-angular1": "npm:single-spa-angular1@^2.2.3",
       "single-spa-angular2": "npm:single-spa-angular2@^1.0.0",
       "single-spa-react": "npm:single-spa-react@^2.0.3",

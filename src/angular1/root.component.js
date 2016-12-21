@@ -1,10 +1,10 @@
 import angular from 'angular';
-import template from './base.template.html';
+import template from './root.template.html';
 import {showFrameworkObservable, getBorder} from 'common/colored-border.js';
 
 angular
 .module('single-spa-app')
-.component('base', {
+.component('root', {
 	template,
 	controllerAs: 'vm',
 	controller($timeout) {
