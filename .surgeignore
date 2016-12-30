@@ -1,3 +1,3 @@
-node_modules
+!build/vanillajs/node_modules/
 bin
 src

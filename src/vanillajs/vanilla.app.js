@@ -1,5 +1,9 @@
 import {getBorder, showFrameworkObservable} from 'common/colored-border.js';
 
+/* Vanilla javascript and iframes don't result in the most elegant code, but
+ * it works. No judging :).
+ */
+
 let iframe, container, explanation, frameworkInspectorSubscription;
 
 export async function bootstrap() {
