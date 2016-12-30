@@ -87,6 +87,11 @@ function menuItems() {
 					Svelte
 				</a>
 			</li>
+			<li>
+				<a href="#/preact">
+					Preact
+				</a>
+			</li>
 		</div>
 	)
 }

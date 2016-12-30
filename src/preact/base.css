@@ -1,0 +1,44 @@
+.navigation{
+  text-align: center;
+}
+
+.topitems{
+  text-align: center;
+}
+.topitems button{
+  padding: 0.2em 0.5em;
+  font-size: 1.4em;
+}
+
+.item {
+  float: left;
+  width: 100%;
+  margin: .45em 0;
+}
+.item .title {
+  font-size: 1.3em;
+}
+.item .title .domain {
+  color: #CCC;
+  font-size: 0.7em;
+}
+.item .vitals {
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+.item .vitals .score {
+  color: orange;
+  font-size: 2em;
+}
+.item .vitals .comments {
+  clear: left;
+}
+.item .vitals .comments a {
+  text-decoration: none;
+  color: #EEE;
+}
+.item .content {
+  float: left;
+  width: calc(100% - 100px);
+}

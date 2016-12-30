@@ -6,8 +6,10 @@ export function getBorder(framework) {
 	const colors = {
 		react: '#61dafb',
 		angular1: '#A6120D',
-		angular2: '#26a69a',
-		vue: 'yellow',
+		angular2: '#1976D2',
+		vue: '#41B883',
+		svelte: '#A92224',
+		preact: '#673AB8',
 	};
 
 	const color = colors[framework] || 'rgb(66, 133, 244)';

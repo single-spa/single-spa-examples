@@ -16,7 +16,7 @@ export default class Technology extends React.Component {
 			<div className="col s7 m3 l3">
 				<div className="card">
 					<div className="card-image" style={imgStyles}>
-						<img className="activator" src={imgSrc} height="125" style={{maxHeight: '150px', width: 'initial'}} />
+						<img className="activator" src={imgSrc} height="125" style={{maxHeight: '150px', width: 'initial', maxWidth: '100%'}} />
 					</div>
 					<div className="card-content">
 						<span className="card-title grey-text text-darken-4 activator">

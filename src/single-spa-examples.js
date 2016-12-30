@@ -7,6 +7,7 @@ singleSpa.declareChildApplication('react', () => SystemJS.import('/build/react.a
 singleSpa.declareChildApplication('angular2', () => SystemJS.import('/build/angular2.app.js'), hashPrefix('/angular2'));
 singleSpa.declareChildApplication('vue', () => SystemJS.import('/build/vue.app.js'), hashPrefix('/vue'));
 singleSpa.declareChildApplication('svelte', () => SystemJS.import('/build/svelte.app.js'), hashPrefix('/svelte'));
+singleSpa.declareChildApplication('preact', () => SystemJS.import('/build/preact.app.js'), hashPrefix('/preact'));
 
 singleSpa.start();
 

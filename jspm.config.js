@@ -14,12 +14,7 @@ SystemJS.config({
       "main": "single-spa-examples.js",
       "meta": {
         "*.js": {
-          "loader": "plugin-babel",
-          "babelOptions": {
-            "plugins": [
-              "babel-plugin-transform-react-jsx"
-            ]
-          }
+          "loader": "plugin-babel"
         },
         "*.ts": {
           "loader": "ts"
@@ -27,6 +22,37 @@ SystemJS.config({
         "*.html": {
           "loader": "text"
         }
+      }
+    }
+  },
+  meta: {
+    "src/home/*.js": {
+      "babelOptions": {
+        "plugins": [
+          "babel-plugin-transform-react-jsx"
+        ]
+      }
+    },
+    "src/navbar/*.js": {
+      "babelOptions": {
+        "plugins": [
+          "babel-plugin-transform-react-jsx"
+        ]
+      }
+    },
+    "src/preact/*.js": {
+      "babelOptions": {
+        "presets": [
+          "babel-preset-stage-0"
+        ],
+        "plugins": [
+          [
+            "babel-plugin-transform-react-jsx",
+            {
+              "pragma": "h"
+            }
+          ]
+        ]
       }
     }
   }
@@ -44,6 +70,7 @@ SystemJS.config({
     "@angular/core": "npm:@angular/core@2.1.2",
     "@angular/platform-browser": "npm:@angular/platform-browser@2.1.2",
     "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.1.2",
+    "single-spa-preact": "npm:@joeldenning/single-spa-preact@1.0.0",
     "angular": "npm:angular@1.5.8",
     "angular-ui-router": "npm:angular-ui-router@1.0.0-beta.2",
     "aphrodite": "npm:aphrodite@1.1.0",
@@ -62,13 +89,14 @@ SystemJS.config({
     "net": "npm:jspm-nodelibs-net@0.2.0",
     "os": "npm:jspm-nodelibs-os@0.2.0",
     "path": "npm:jspm-nodelibs-path@0.2.1",
+    "preact": "npm:preact@7.1.0",
     "process": "npm:jspm-nodelibs-process@0.2.0",
     "react": "npm:react@15.3.2",
     "react-dom": "npm:react-dom@15.3.2",
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
     "rx": "npm:rx@4.1.0",
     "rxjs": "npm:rxjs@5.0.0-beta.12",
-    "single-spa": "npm:single-spa@3.4.0",
+    "single-spa": "npm:single-spa@3.4.2",
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",
     "single-spa-angular2": "npm:single-spa-angular2@1.0.0",
     "single-spa-react": "npm:single-spa-react@2.0.3",
@@ -251,7 +279,7 @@ SystemJS.config({
         "create-hash": "npm:create-hash@1.1.2",
         "evp_bytestokey": "npm:evp_bytestokey@1.0.0",
         "pbkdf2": "npm:pbkdf2@3.0.9",
-        "asn1.js": "npm:asn1.js@4.9.0"
+        "asn1.js": "npm:asn1.js@4.9.1"
       }
     },
     "npm:browserify-rsa@4.0.1": {
@@ -393,13 +421,6 @@ SystemJS.config({
         "inherits": "npm:inherits@2.0.3"
       }
     },
-    "npm:asn1.js@4.9.0": {
-      "map": {
-        "bn.js": "npm:bn.js@4.11.6",
-        "inherits": "npm:inherits@2.0.3",
-        "minimalistic-assert": "npm:minimalistic-assert@1.0.0"
-      }
-    },
     "npm:rxjs@5.0.0-beta.12": {
       "map": {
         "symbol-observable": "npm:symbol-observable@1.0.4"
@@ -424,6 +445,13 @@ SystemJS.config({
         "core-util-is": "npm:core-util-is@1.0.2",
         "buffer-shims": "npm:buffer-shims@1.0.0",
         "util-deprecate": "npm:util-deprecate@1.0.2"
+      }
+    },
+    "npm:asn1.js@4.9.1": {
+      "map": {
+        "bn.js": "npm:bn.js@4.11.6",
+        "inherits": "npm:inherits@2.0.3",
+        "minimalistic-assert": "npm:minimalistic-assert@1.0.0"
       }
     }
   }

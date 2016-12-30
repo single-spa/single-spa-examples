@@ -13,7 +13,8 @@ cp jspm_packages/system-polyfills.src.js build/system-polyfills.src.js
 ./bin/build-home
 ./bin/build-navbar
 ./bin/build-angular1
-./bin/build-react
+./bin/build-react -p
 ./bin/build-angular2
 ./bin/build-vue
 ./bin/build-svelte
+./bin/build-preact
