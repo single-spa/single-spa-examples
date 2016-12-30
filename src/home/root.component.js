@@ -90,7 +90,7 @@ export default class HomeRoot extends React.Component {
 						</p>
 						<div className="row">
 							<Technology
-								imgSrc="https://webpack.js.org/2baa77d6015e6de6adf1ffa247530568.svg"
+								imgSrc="https://avatars0.githubusercontent.com/webpack?&s=256"
 								cardTitle="Webpack"
 								href="/#/react"
 								explanation={`The React example is built with Webpack, and even uses require.ensure for extra lazy loading.`}
