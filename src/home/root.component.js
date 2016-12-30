@@ -97,7 +97,7 @@ export default class HomeRoot extends React.Component {
 							/>
 							<Technology
 								imgSrc="https://avatars3.githubusercontent.com/u/3802108?v=3&s=200"
-								cardTitle="jspm/SystemJS"
+								cardTitle="SystemJS"
 								href="/#/angular1"
 								explanation={`The navbar app, home app, and Angular 1 app are all built with JSPM / SystemJS.`}
 							/>

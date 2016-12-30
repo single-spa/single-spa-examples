@@ -19,7 +19,7 @@ export default class Technology extends React.Component {
 						<img className="activator" src={imgSrc} height="125" style={{maxHeight: '150px', width: 'initial', maxWidth: '100%'}} />
 					</div>
 					<div className="card-content">
-						<span className="card-title grey-text text-darken-4 activator">
+						<span className="card-title grey-text text-darken-4 activator" style={{wordWrap: 'break-word'}}>
 							{cardTitle}
 						</span>
 						<div>
@@ -37,7 +37,7 @@ export default class Technology extends React.Component {
 							{explanation}
 						</p>
 						<a className="waves-effect waves-teal btn-flat" href={href}>
-							Go to example
+							Show me
 						</a>
 					</div>
 				</div>
