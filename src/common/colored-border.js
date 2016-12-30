@@ -10,6 +10,7 @@ export function getBorder(framework) {
 		vue: '#41B883',
 		svelte: '#A92224',
 		preact: '#673AB8',
+		iframe: 'black',
 	};
 
 	const color = colors[framework] || 'rgb(66, 133, 244)';

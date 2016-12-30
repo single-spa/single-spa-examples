@@ -36,8 +36,8 @@ export default class Technology extends React.Component {
 						<p style={{marginBottom: '3px'}}>
 							{explanation}
 						</p>
-						<a className="waves-effect waves-teal btn-flat" href={href}>
-							Show me
+						<a className="waves-effect waves-teal btn-flat" href={href} style={{width: '100%', textAlign: 'center'}}>
+							Open app
 						</a>
 					</div>
 				</div>

@@ -18,3 +18,4 @@ cp jspm_packages/system-polyfills.src.js build/system-polyfills.src.js
 ./bin/build-vue
 ./bin/build-svelte
 ./bin/build-preact
+./bin/build-vanillajs

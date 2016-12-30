@@ -8,6 +8,7 @@ singleSpa.declareChildApplication('angular2', () => SystemJS.import('/build/angu
 singleSpa.declareChildApplication('vue', () => SystemJS.import('/build/vue.app.js'), hashPrefix('/vue'));
 singleSpa.declareChildApplication('svelte', () => SystemJS.import('/build/svelte.app.js'), hashPrefix('/svelte'));
 singleSpa.declareChildApplication('preact', () => SystemJS.import('/build/preact.app.js'), hashPrefix('/preact'));
+singleSpa.declareChildApplication('iframe-vanilla-js', () => SystemJS.import('/build/vanilla.app.js'), hashPrefix('/vanilla'));
 
 singleSpa.start();
 

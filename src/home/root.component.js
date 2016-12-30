@@ -79,6 +79,14 @@ export default class HomeRoot extends React.Component {
 								href="/#/preact"
 								explanation={`Preact is compatible with single-spa. Easily get started with the single-spa-preact plugin.`}
 							/>
+							<Technology
+								imgSrc="http://xitrus.es/blog/imgs/vnll.jpg"
+								cardTitle="Vanilla"
+								href="/#/vanilla"
+								explanation={`
+									If you want to write single-spa applications in vanilla javascript, that's fine too.
+								`}
+							/>
 						</div>
 					</div>
 					<div className="row">
@@ -100,6 +108,16 @@ export default class HomeRoot extends React.Component {
 								cardTitle="SystemJS"
 								href="/#/angular1"
 								explanation={`The navbar app, home app, and Angular 1 app are all built with JSPM / SystemJS.`}
+							/>
+							<Technology
+								imgSrc="http://4.bp.blogspot.com/-rI6g4ZgVqBA/Uv8fPnl9TLI/AAAAAAAAMZU/tbylo5ngisg/s1600/iFrame+Generator.jpg"
+								cardTitle="Iframe"
+								href="/#/vanilla"
+								explanation={`
+									Putting things in iframes is the wrong thing to do many times, but there are valid use cases for it.
+									If you put a single-spa application into an iframe, you get a whole new DOM and global namespace for variables.
+									But the cons include degraded performance and trickier inter-app communication.
+								`}
 							/>
 						</div>
 					</div>

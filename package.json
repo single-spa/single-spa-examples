@@ -13,6 +13,7 @@
     "build-angular1": "./bin/build-angular1 -dw",
     "build-react": "./bin/build-react -w",
     "build-preact": "./bin/build-preact -dw",
+	"build-vanilla": "./bin/build-vanillajs",
     "build-angular2": "./bin/build-angular2 -dw"
   },
   "repository": {

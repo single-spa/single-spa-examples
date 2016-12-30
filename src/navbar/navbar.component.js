@@ -92,6 +92,11 @@ function menuItems() {
 					Preact
 				</a>
 			</li>
+			<li>
+				<a href="#/vanilla">
+					Vanilla
+				</a>
+			</li>
 		</div>
 	)
 }
