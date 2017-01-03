@@ -1,6 +1,5 @@
 {
   "name": "single-spa-examples",
-  "version": "1.0.0",
   "description": "This is an example of examples on how to use [single-spa](https://github.com/joeldenning/single-spa) in a variety of contexts. Right now there are examples with the following technologies:",
   "scripts": {
     "postinstall": "jspm install && npm run build",
@@ -13,7 +12,7 @@
     "build-angular1": "./bin/build-angular1 -dw",
     "build-react": "./bin/build-react -w",
     "build-preact": "./bin/build-preact -dw",
-	"build-vanilla": "./bin/build-vanillajs",
+    "build-vanilla": "./bin/build-vanillajs",
     "build-angular2": "./bin/build-angular2 -dw"
   },
   "repository": {
@@ -44,7 +43,6 @@
     "main": "single-spa-examples.js",
     "dependencies": {
       "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.1.2",
-      "@joeldenning/single-spa-preact": "npm:@joeldenning/single-spa-preact@^1.0.0",
       "angular-ui-router": "npm:angular-ui-router@^1.0.0-beta.2",
       "aphrodite": "npm:aphrodite@^1.1.0",
       "css": "github:systemjs/plugin-css@^0.1.32",
@@ -55,6 +53,7 @@
       "single-spa": "npm:single-spa@^3.4.2",
       "single-spa-angular1": "npm:single-spa-angular1@^2.2.3",
       "single-spa-angular2": "npm:single-spa-angular2@^1.0.0",
+      "single-spa-preact": "npm:single-spa-preact@^1.0.1",
       "single-spa-react": "npm:single-spa-react@^2.0.3",
       "single-spa-svelte": "npm:single-spa-svelte@^0.1.0",
       "single-spa-vue": "npm:single-spa-vue@0.0.3",
