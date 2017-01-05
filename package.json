@@ -13,7 +13,8 @@
     "build-react": "./bin/build-react -w",
     "build-preact": "./bin/build-preact -dw",
     "build-vanilla": "./bin/build-vanillajs",
-    "build-angular2": "./bin/build-angular2 -dw"
+    "build-angular2": "./bin/build-angular2 -dw",
+    "build-inferno": "./bin/build-inferno -dw"
   },
   "repository": {
     "type": "git",
@@ -26,17 +27,17 @@
   },
   "homepage": "https://github.com/joeldenning/single-spa-examples#readme",
   "devDependencies": {
-    "babel-loader": "^6.2.7",
-    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
-    "css-loader": "^0.25.0",
+    "css-loader": "^0.26.1",
     "http-server": "^0.9.0",
     "jspm": "^0.17.0-beta.32",
     "react-router": "^3.0.0",
     "single-spa-react": "^2.0.3",
-    "svelte-cli": "^1.0.3",
-    "webpack": "^1.13.3"
+    "svelte-cli": "^1.3.0",
+    "webpack": "^1.14.0"
   },
   "jspm": {
     "name": "single-spa-examples",
@@ -46,33 +47,38 @@
       "angular-ui-router": "npm:angular-ui-router@^1.0.0-beta.2",
       "aphrodite": "npm:aphrodite@^1.1.0",
       "css": "github:systemjs/plugin-css@^0.1.32",
+      "inferno-component": "npm:inferno-component@^1.0.7",
+      "inferno-create-element": "npm:inferno-create-element@^1.0.7",
       "preact": "npm:preact@^7.1.0",
-      "react-dom": "npm:react-dom@^15.3.2",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.8",
+      "react-dom": "npm:react-dom@^15.4.1",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.9",
       "rx": "npm:rx@^4.1.0",
       "single-spa": "npm:single-spa@^3.4.2",
       "single-spa-angular1": "npm:single-spa-angular1@^2.2.3",
       "single-spa-angular2": "npm:single-spa-angular2@^1.0.0",
+      "single-spa-inferno": "npm:single-spa-inferno@^1.0.0",
       "single-spa-preact": "npm:single-spa-preact@^1.0.1",
       "single-spa-react": "npm:single-spa-react@^2.0.3",
       "single-spa-svelte": "npm:single-spa-svelte@^0.1.0",
       "single-spa-vue": "npm:single-spa-vue@0.0.3",
       "text": "github:systemjs/plugin-text@^0.0.9",
       "ts": "github:frankwallis/plugin-typescript@^5.2.9",
-      "vue": "npm:vue@^2.0.5"
+      "vue": "npm:vue@^2.1.8"
     },
     "devDependencies": {
+      "babel-plugin-inferno": "npm:babel-plugin-inferno@^1.4.0",
+      "babel-plugin-syntax-jsx": "npm:babel-plugin-syntax-jsx@^6.18.0",
       "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.8.0",
       "babel-preset-stage-0": "npm:babel-preset-stage-0@^6.16.0",
       "core-js": "npm:core-js@^2.4.1",
-      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.17"
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.18"
     },
     "peerDependencies": {
       "@angular/common": "npm:@angular/common@2.1.2",
       "@angular/compiler": "npm:@angular/compiler@2.1.2",
       "@angular/core": "npm:@angular/core@2.1.2",
       "@angular/platform-browser": "npm:@angular/platform-browser@^2.1.2",
-      "angular": "npm:angular@^1.5.8",
+      "angular": "npm:angular@^1.6.1",
       "assert": "npm:jspm-nodelibs-assert@^0.2.0",
       "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
       "child_process": "npm:jspm-nodelibs-child_process@^0.2.0",
@@ -83,12 +89,13 @@
       "fs": "npm:jspm-nodelibs-fs@^0.2.0",
       "http": "npm:jspm-nodelibs-http@^0.2.0",
       "https": "npm:jspm-nodelibs-https@^0.2.0",
+      "inferno": "npm:inferno@^1.0.7",
       "module": "npm:jspm-nodelibs-module@^0.2.0",
       "net": "npm:jspm-nodelibs-net@^0.2.0",
       "os": "npm:jspm-nodelibs-os@^0.2.0",
       "path": "npm:jspm-nodelibs-path@^0.2.0",
       "process": "npm:jspm-nodelibs-process@^0.2.0",
-      "react": "npm:react@^15.3.2",
+      "react": "npm:react@^15.4.1",
       "rxjs": "npm:rxjs@5.0.0-beta.12",
       "stream": "npm:jspm-nodelibs-stream@^0.2.0",
       "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
@@ -97,7 +104,7 @@
       "util": "npm:jspm-nodelibs-util@^0.2.0",
       "vm": "npm:jspm-nodelibs-vm@^0.2.0",
       "zlib": "npm:jspm-nodelibs-zlib@^0.2.0",
-      "zone.js": "npm:zone.js@^0.6.21"
+      "zone.js": "npm:zone.js@^0.7.4"
     },
     "overrides": {
       "npm:@angular/common@2.1.2": {
@@ -222,7 +229,7 @@
         "jspmNodeConversion": false,
         "format": "cjs"
       },
-      "npm:reflect-metadata@0.1.8": {
+      "npm:reflect-metadata@0.1.9": {
         "jspmNodeConversion": false,
         "map": {
           "crypto": {

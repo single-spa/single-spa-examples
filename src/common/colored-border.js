@@ -11,6 +11,7 @@ export function getBorder(framework) {
 		svelte: '#A92224',
 		preact: '#673AB8',
 		iframe: 'black',
+		inferno: '#FF3232',
 	};
 
 	const color = colors[framework] || 'rgb(66, 133, 244)';

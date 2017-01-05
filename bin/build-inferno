@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+./node_modules/jspm/jspm.js build \
+	src/inferno/inferno.app.js \
+	- common/colored-border.js \
+	build/inferno.app.js \
+	--format amd \
+	--source-map-contents \
+	--skip-rollup \
+	"$@"

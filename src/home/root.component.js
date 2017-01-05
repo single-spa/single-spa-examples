@@ -87,6 +87,14 @@ export default class HomeRoot extends React.Component {
 									If you want to write single-spa applications in vanilla javascript, that's fine too.
 								`}
 							/>
+							<Technology
+								imgSrc="/image/inferno-logo.png"
+								cardTitle="Inferno"
+								href="/#/inferno"
+								explanation={`
+									Inferno is compatible with single-spa. Easily get started with the single-spa-inferno plugin.
+								`}
+							/>
 						</div>
 					</div>
 					<div className="row">

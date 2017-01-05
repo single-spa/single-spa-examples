@@ -9,6 +9,7 @@ singleSpa.declareChildApplication('vue', () => SystemJS.import('/build/vue.app.j
 singleSpa.declareChildApplication('svelte', () => SystemJS.import('/build/svelte.app.js'), hashPrefix('/svelte'));
 singleSpa.declareChildApplication('preact', () => SystemJS.import('/build/preact.app.js'), hashPrefix('/preact'));
 singleSpa.declareChildApplication('iframe-vanilla-js', () => SystemJS.import('/build/vanilla.app.js'), hashPrefix('/vanilla'));
+singleSpa.declareChildApplication('inferno', () => SystemJS.import('/build/inferno.app.js'), hashPrefix('/inferno'));
 
 singleSpa.start();
 
