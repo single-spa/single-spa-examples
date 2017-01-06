@@ -27,11 +27,21 @@ export default class InfernoComponent extends Component {
 		let time = new Date(this.state.time).toLocaleTimeString();
 
 		return <div style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-					}}>
-			<span style={{fontSize: '64pt'}}>{ time }</span>
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				flexDirection: 'column'
+			}}>
+
+			<p style={{fontSize: '16pt', paddingTop: '32px'}}>
+				Built with Inferno
+
+				<img src="/images/inferno-logo.png" align="center" width="60" style={{paddingLeft: '12px'}} />
+			</p>
+			<p style={{fontSize: '32pt'}}>
+				The time is:<br />
+				<strong>{ time }</strong>
+			</p>
 		</div>
 	}
 }
