@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+
+./node_modules/webpack/bin/webpack.js \
+	--config src/inferno/webpack.config.js \
+	"$@"
