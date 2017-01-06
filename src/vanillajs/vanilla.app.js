@@ -48,6 +48,8 @@ export async function unmount() {
 
 function cleanupInspector() {
 	container.style.border = ``;
-	if (explanation)
+	if (explanation) {
 		container.removeChild(explanation);
+		explanation = null;
+	}
 }

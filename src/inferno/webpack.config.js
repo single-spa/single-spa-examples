@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-	devtool: 'inline-devtool',
+	devtool: 'sourcemaps',
 	entry: {
 		'inferno.app': './inferno.app.js',
 	},
