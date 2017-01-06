@@ -25,6 +25,13 @@ export default class InfernoComponent extends Component {
 
 	render() {
 		let time = new Date(this.state.time).toLocaleTimeString();
-		return <span>{ time }</span>;
+
+		return <div style={{
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}>
+			<span style={{fontSize: '64pt'}}>{ time }</span>
+		</div>
 	}
 }
