@@ -97,6 +97,11 @@ function menuItems() {
 					Vanilla
 				</a>
 			</li>
+			<li>
+				<a href="#/inferno">
+					Inferno
+				</a>
+			</li>
 		</div>
 	)
 }

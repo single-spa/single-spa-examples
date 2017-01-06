@@ -88,7 +88,7 @@ export default class HomeRoot extends React.Component {
 								`}
 							/>
 							<Technology
-								imgSrc="/image/inferno-logo.png"
+								imgSrc="/images/inferno-logo.png"
 								cardTitle="Inferno"
 								href="/#/inferno"
 								explanation={`

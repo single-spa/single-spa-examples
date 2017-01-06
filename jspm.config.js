@@ -61,10 +61,8 @@ SystemJS.config({
           "babel-preset-stage-0"
         ],
         "plugins": [
-          [
-            "babel-plugin-transform-react-jsx",
-            "inferno"
-          ]
+          "babel-plugin-transform-react-jsx",
+          "babel-plugin-inferno"
         ]
       }
     }
