@@ -95,9 +95,6 @@ SystemJS.config({
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
     "http": "npm:jspm-nodelibs-http@0.2.0",
     "https": "npm:jspm-nodelibs-https@0.2.1",
-    "inferno": "npm:inferno@1.0.7",
-    "inferno-component": "npm:inferno-component@1.0.7",
-    "inferno-create-element": "npm:inferno-create-element@1.0.7",
     "module": "npm:jspm-nodelibs-module@0.2.0",
     "net": "npm:jspm-nodelibs-net@0.2.0",
     "os": "npm:jspm-nodelibs-os@0.2.0",
@@ -112,7 +109,7 @@ SystemJS.config({
     "single-spa": "npm:single-spa@3.4.2",
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",
     "single-spa-angular2": "npm:single-spa-angular2@1.0.0",
-    "single-spa-inferno": "npm:single-spa-inferno@1.0.0",
+    "single-spa-inferno": "npm:single-spa-inferno@1.0.1",
     "single-spa-preact": "npm:single-spa-preact@1.0.1",
     "single-spa-react": "npm:single-spa-react@2.0.3",
     "single-spa-svelte": "npm:single-spa-svelte@0.1.0",
@@ -426,11 +423,6 @@ SystemJS.config({
         "minimalistic-assert": "npm:minimalistic-assert@1.0.0"
       }
     },
-    "npm:inferno-create-element@1.0.7": {
-      "map": {
-        "inferno": "npm:inferno@1.0.7"
-      }
-    },
     "npm:loose-envify@1.3.0": {
       "map": {
         "js-tokens": "npm:js-tokens@2.0.0"
@@ -468,11 +460,6 @@ SystemJS.config({
         "fbjs": "npm:fbjs@0.8.8",
         "loose-envify": "npm:loose-envify@1.3.0",
         "object-assign": "npm:object-assign@4.1.0"
-      }
-    },
-    "npm:inferno-component@1.0.7": {
-      "map": {
-        "inferno": "npm:inferno@1.0.7"
       }
     }
   }

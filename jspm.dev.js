@@ -4,7 +4,6 @@ SystemJS.config({
     "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@6.8.0",
     "core-js": "npm:core-js@2.4.1",
     "babel-preset-stage-0": "npm:babel-preset-stage-0@6.16.0",
-    "babel-plugin-inferno": "npm:babel-plugin-inferno@1.4.0",
     "babel-plugin-syntax-jsx": "npm:babel-plugin-syntax-jsx@6.18.0"
   },
   packages: {
@@ -274,11 +273,6 @@ SystemJS.config({
     "npm:strip-ansi@3.0.1": {
       "map": {
         "ansi-regex": "npm:ansi-regex@2.0.0"
-      }
-    },
-    "npm:babel-plugin-inferno@1.4.0": {
-      "map": {
-        "babel-plugin-syntax-jsx": "npm:babel-plugin-syntax-jsx@6.18.0"
       }
     }
   }
