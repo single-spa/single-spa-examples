@@ -37,7 +37,7 @@
     "inferno": "^1.0.7",
     "inferno-component": "^1.0.7",
     "inferno-create-element": "^1.0.7",
-    "jspm": "^0.17.0-beta.32",
+    "jspm": "0.17.0-beta.32",
     "react-router": "^3.0.0",
     "single-spa-inferno": "^1.0.1",
     "single-spa-react": "^2.0.3",
@@ -105,7 +105,7 @@
       "util": "npm:jspm-nodelibs-util@^0.2.0",
       "vm": "npm:jspm-nodelibs-vm@^0.2.0",
       "zlib": "npm:jspm-nodelibs-zlib@^0.2.0",
-      "zone.js": "npm:zone.js@^0.7.4"
+      "zone.js": "npm:zone.js@^0.6.21"
     },
     "overrides": {
       "npm:@angular/common@2.1.2": {
