@@ -55,7 +55,7 @@ export default class HomeRoot extends React.Component {
 								explanation={`Angular 1 has some quirks, but works just fine when you use the single-spa-angular1 npm library to help you set up your app`}
 							/>
 							<Technology
-								imgSrc="https://angular.io/resources/images/logos/angular2/angular.svg"
+								imgSrc="/images/angular.svg"
 								imgBackgroundColor="#1976D2"
 								cardTitle="Angular 2"
 								href="/#/angular2"
