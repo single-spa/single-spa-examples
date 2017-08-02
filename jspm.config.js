@@ -8,7 +8,7 @@ SystemJS.config({
   browserConfig: {
     "baseURL": "/"
   },
-  transpiler: "plugin-babel",
+  transpiler: false,
   packages: {
     "single-spa-examples": {
       "main": "single-spa-examples.js",

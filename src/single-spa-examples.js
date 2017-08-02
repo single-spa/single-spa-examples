@@ -10,11 +10,46 @@ singleSpa.declareChildApplication('svelte', () => SystemJS.import('/build/svelte
 singleSpa.declareChildApplication('preact', () => SystemJS.import('/build/preact.app.js'), hashPrefix('/preact'));
 singleSpa.declareChildApplication('iframe-vanilla-js', () => SystemJS.import('/build/vanilla.app.js'), hashPrefix('/vanilla'));
 singleSpa.declareChildApplication('inferno', () => SystemJS.import('/build/inferno.app.js'), hashPrefix('/inferno'));
+singleSpa.declareChildApplication('ember', () => loadEmberScript('/build/ember-app/assets/ember-app.js'), hashPrefix('/ember'));
 
 singleSpa.start();
 
 function hashPrefix(prefix) {
-	return function() {
-		return window.location.hash.indexOf(`#${prefix}`) === 0;
+	return function(location) {
+		return location.hash.indexOf(`#${prefix}`) === 0;
 	}
+}
+
+function loadEmberScript(src) {
+	return new Promise((resolve, reject) => {
+		const scriptEl = document.createElement('script');
+		scriptEl.src = src;
+		scriptEl.async = true;
+		scriptEl.onload = () => {
+			let app;
+
+			resolve({
+				bootstrap() {
+					return Promise.resolve();
+				},
+				mount() {
+					return Promise
+						.resolve()
+						.then(() => {
+							app = window.require('ember-app/app').default.create({});
+						})
+				},
+				unmount() {
+					return Promise
+						.resolve()
+						.then(() => {
+							app.destroy();
+							app = null;
+						});
+				},
+			});
+		}
+		scriptEl.onerror = reject;
+		document.head.appendChild(scriptEl);
+	});
 }
