@@ -23,11 +23,11 @@ function hashPrefix(prefix) {
 function loadEmberScript(appName) {
     return new Promise((resolve, reject) => {
         const scriptVendor = document.createElement('script');
-        scriptVendor.src = '/build/ember-app/assets/vendor.js';
+        scriptVendor.src = '/build/'+appName+'/assets/vendor.js';
         scriptVendor.async = true;
         scriptVendor.onload = () => {
             const scriptEl = document.createElement('script');
-            scriptEl.src = '/build/ember-app/assets/ember-app.js';
+            scriptEl.src = '/build/'+appName+'/assets/ember-app.js';
             scriptEl.async = true;
             scriptEl.onload = () => {
                 let app;
@@ -40,7 +40,7 @@ function loadEmberScript(appName) {
                         return Promise
                             .resolve()
                             .then(() => {
-                                app = window.require('ember-app/app').default.create({
+                                app = window.require(appName+'/app').default.create({
                                     rootElement: '#' + appName
                                 });
                             })
