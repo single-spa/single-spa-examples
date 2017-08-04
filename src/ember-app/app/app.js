@@ -2,6 +2,7 @@ import Ember from 'ember';
 import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
+import singleSpaEmber from 'single-spa-ember';
 
 const App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
@@ -13,28 +14,16 @@ loadInitializers(App, config.modulePrefix);
 
 export default App;
 
-let applicationInstance;
+// Single-spa configuration and lifecycles
+const emberLifecycles = singleSpaEmber({
+	App,
+	appName: 'ember-app',
+	createOpts: {
+		rootElement: '#ember-app',
+	},
+})
 
 // Single-spa lifecycles.
-export function bootstrap() {
-	return Promise.resolve();
-}
-
-export function mount() {
-	return Promise
-		.resolve()
-		.then(() => {
-			applicationInstance = App.create({
-				rootElement: '#ember-app',
-			});
-		})
-}
-
-export function unmount() {
-	return Promise
-		.resolve()
-		.then(() => {
-			applicationInstance.destroy();
-			applicationInstance = null;
-		});
-}
+export const bootstrap = emberLifecycles.bootstrap;
+export const mount = emberLifecycles.mount;
+export const unmount = emberLifecycles.unmount;

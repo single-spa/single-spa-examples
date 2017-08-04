@@ -7,10 +7,16 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     autoRun: false,
     storeConfigInMeta: false,
-		fingerprint: {
-			customHash: null,
-		},
+    fingerprint: {
+      customHash: null,
+    },
     // Add options here
+  });
+
+  app.import('bower_components/single-spa-ember/amd/single-spa-ember.js', {
+    using: [
+      {transformation: 'amd', as: 'single-spa-ember'},
+    ],
   });
 
   // Use `app.import` to add additional libraries to the generated
