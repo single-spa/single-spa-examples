@@ -30,30 +30,7 @@ function loadEmberScript(appName) {
             scriptEl.src = '/build/'+appName+'/assets/ember-app.js';
             scriptEl.async = true;
             scriptEl.onload = () => {
-                let app;
-
-                resolve({
-                    bootstrap() {
-                        return Promise.resolve();
-                    },
-                    mount() {
-                        return Promise
-                            .resolve()
-                            .then(() => {
-                                app = window.require(appName+'/app').default.create({
-                                    rootElement: '#' + appName
-                                });
-                            })
-                    },
-                    unmount() {
-                        return Promise
-                            .resolve()
-                            .then(() => {
-                                app.destroy();
-                                app = null;
-                            });
-                    },
-                });
+							resolve(window.require(appName+'/app'));
             }
             scriptEl.onerror = reject;
             document.head.appendChild(scriptEl);

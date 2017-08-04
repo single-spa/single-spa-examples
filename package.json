@@ -3,7 +3,7 @@
   "description": "This is an example of examples on how to use [single-spa](https://github.com/joeldenning/single-spa) in a variety of contexts. Right now there are examples with the following technologies:",
   "scripts": {
     "postinstall": "jspm install && npm run build",
-    "start": "http-server",
+    "start": "http-server -c 1",
     "build": "./bin/build-code",
     "build-home": "./bin/build-home -dw",
     "build-common-deps": "./bin/build-common-deps -dw",

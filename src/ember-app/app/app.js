@@ -12,3 +12,29 @@ const App = Ember.Application.extend({
 loadInitializers(App, config.modulePrefix);
 
 export default App;
+
+let applicationInstance;
+
+// Single-spa lifecycles.
+export function bootstrap() {
+	return Promise.resolve();
+}
+
+export function mount() {
+	return Promise
+		.resolve()
+		.then(() => {
+			applicationInstance = App.create({
+				rootElement: '#ember-app',
+			});
+		})
+}
+
+export function unmount() {
+	return Promise
+		.resolve()
+		.then(() => {
+			applicationInstance.destroy();
+			applicationInstance = null;
+		});
+}
