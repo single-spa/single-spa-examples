@@ -5,7 +5,8 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-		autoRun: false,
+    autoRun: false,
+    storeConfigInMeta: false
     // Add options here
   });
 
