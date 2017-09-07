@@ -102,6 +102,11 @@ function menuItems() {
 					Inferno
 				</a>
 			</li>
+			<li>
+				<a href="#/ember">
+					Ember
+				</a>
+			</li>
 		</div>
 	)
 }

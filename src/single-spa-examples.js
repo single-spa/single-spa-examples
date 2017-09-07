@@ -1,4 +1,5 @@
 import * as singleSpa from 'single-spa';
+import {loadEmberApp} from 'single-spa-ember';
 
 singleSpa.declareChildApplication('navbar', () => SystemJS.import('/build/navbar.app.js'), () => true);
 singleSpa.declareChildApplication('home', () => SystemJS.import('/build/home.app.js'), () => location.hash === "" || location.hash === "#");
@@ -10,11 +11,12 @@ singleSpa.declareChildApplication('svelte', () => SystemJS.import('/build/svelte
 singleSpa.declareChildApplication('preact', () => SystemJS.import('/build/preact.app.js'), hashPrefix('/preact'));
 singleSpa.declareChildApplication('iframe-vanilla-js', () => SystemJS.import('/build/vanilla.app.js'), hashPrefix('/vanilla'));
 singleSpa.declareChildApplication('inferno', () => SystemJS.import('/build/inferno.app.js'), hashPrefix('/inferno'));
+singleSpa.declareChildApplication('ember', () => loadEmberApp("ember-app", '/build/ember-app/assets/ember-app.js', '/build/ember-app/assets/vendor.js'), hashPrefix('/ember'));
 
 singleSpa.start();
 
 function hashPrefix(prefix) {
-	return function() {
-		return window.location.hash.indexOf(`#${prefix}`) === 0;
-	}
+    return function(location) {
+        return location.hash.indexOf(`#${prefix}`) === 0;
+    }
 }

@@ -8,7 +8,7 @@ SystemJS.config({
   browserConfig: {
     "baseURL": "/"
   },
-  transpiler: "plugin-babel",
+  transpiler: false,
   packages: {
     "single-spa-examples": {
       "main": "single-spa-examples.js",
@@ -109,6 +109,7 @@ SystemJS.config({
     "single-spa": "npm:single-spa@3.4.3",
     "single-spa-angular1": "npm:single-spa-angular1@2.2.3",
     "single-spa-angular2": "npm:single-spa-angular2@1.0.0",
+    "single-spa-ember": "npm:single-spa-ember@0.1.5",
     "single-spa-inferno": "npm:single-spa-inferno@1.0.1",
     "single-spa-preact": "npm:single-spa-preact@1.0.1",
     "single-spa-react": "npm:single-spa-react@2.0.3",
