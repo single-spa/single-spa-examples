@@ -23,5 +23,5 @@ git clone git@github.com:CanopyTax/single-spa-examples.git
 cd single-spa-examples
 npm install
 npm start
-open localhost:8080
+open http://localhost:8080
 ```
