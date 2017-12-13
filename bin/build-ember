@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-rm -rf build/ember-app
-cd src/ember-app
-npm install
-./node_modules/ember-cli/bin/ember build --output-path ../../build/ember-app/ --environment production
-cd ../..
