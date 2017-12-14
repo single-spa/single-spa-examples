@@ -16,11 +16,11 @@ export default App;
 
 // Single-spa configuration and lifecycles
 const emberLifecycles = singleSpaEmber({
-	App,
-	appName: 'ember-app',
-	createOpts: {
-		rootElement: '#ember-app',
-	},
+  App,
+  appName: 'ember-app',
+  createOpts: {
+    rootElement: '#ember-app',
+  },
 })
 
 // Single-spa lifecycles.

@@ -5,24 +5,24 @@ import singleSpaAngular2 from 'single-spa-angular2';
 import mainModule from './main-module.ts';
 
 const ng2Lifecycles = singleSpaAngular2({
-	domElementGetter,
-	mainModule,
-	angularPlatform: platformBrowserDynamic(),
-	template: `<example-ng2-app />`,
+  domElementGetter,
+  mainModule,
+  angularPlatform: platformBrowserDynamic(),
+  template: `<example-ng2-app />`,
 })
 
 export const bootstrap = [
-	ng2Lifecycles.bootstrap,
+  ng2Lifecycles.bootstrap,
 ];
 
 export const mount = [
-	ng2Lifecycles.mount,
+  ng2Lifecycles.mount,
 ];
 
 export const unmount = [
-	ng2Lifecycles.unmount,
+  ng2Lifecycles.unmount,
 ];
 
 function domElementGetter() {
-	return document.getElementById('angular2');
+  return document.getElementById('angular2');
 }

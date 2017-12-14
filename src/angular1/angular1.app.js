@@ -12,22 +12,22 @@ import './routes.js';
 const domElementGetter = () => document.getElementById('angular1');
 
 const angularLifecycles = singleSpaAngular1({
-	angular,
-	domElementGetter,
-	mainAngularModule: 'single-spa-app',
-	uiRouter: true,
-	// angular-ui-router references `window.angular` :(, so we have to preserve the window.angular global
-	preserveGlobal: true,
+  angular,
+  domElementGetter,
+  mainAngularModule: 'single-spa-app',
+  uiRouter: true,
+  // angular-ui-router references `window.angular` :(, so we have to preserve the window.angular global
+  preserveGlobal: true,
 });
 
 export const bootstrap = [
-	angularLifecycles.bootstrap,
+  angularLifecycles.bootstrap,
 ];
 
 export const mount = [
-	angularLifecycles.mount,
+  angularLifecycles.mount,
 ];
 
 export const unmount = [
-	angularLifecycles.unmount,
+  angularLifecycles.unmount,
 ];

@@ -4,24 +4,24 @@ import singleSpaReact from 'single-spa-react';
 import rootComponent from './root.component.js';
 
 const reactLifecyles = singleSpaReact({
-	React,
-	ReactDOM,
-	domElementGetter,
-	rootComponent,
+  React,
+  ReactDOM,
+  domElementGetter,
+  rootComponent,
 });
 
 export const bootstrap = [
-	reactLifecyles.bootstrap,
+  reactLifecyles.bootstrap,
 ];
 
 export const mount = [
-	reactLifecyles.mount,
+  reactLifecyles.mount,
 ];
 
 export const unmount = [
-	reactLifecyles.unmount,
+  reactLifecyles.unmount,
 ];
 
 function domElementGetter() {
-	return document.getElementById("home");
+  return document.getElementById("home");
 }

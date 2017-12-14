@@ -6,24 +6,26 @@ import './lorem-ipsum.component.js';
 angular
 .module('single-spa-app')
 .config(($stateProvider, $locationProvider) => {
-	$locationProvider.html5Mode({
-		enabled: false,
-		requireBase: false,
-	});
+  $locationProvider.hashPrefix('');
 
-	$stateProvider
-	.state('root', {
-		url: '/angular1',
-		template: '<root />',
-	})
+  $locationProvider.html5Mode({
+    enabled: false,
+    requireBase: false,
+  });
 
-	.state('root.gifs', {
-		url: '/gifs',
-		template: '<gifs />',
-	})
+  $stateProvider
+  .state('root', {
+    url: '/angular1',
+    template: '<root />',
+  })
 
-	.state('root.lorem-ipsum', {
-		url: '/lorem-ipsum',
-		template: '<lorem-ipsum />',
-	})
+  .state('root.gifs', {
+    url: '/gifs',
+    template: '<gifs />',
+  })
+
+  .state('root.lorem-ipsum', {
+    url: '/lorem-ipsum',
+    template: '<lorem-ipsum />',
+  })
 });

@@ -4,31 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Single-spa examples</title>
-		<script src="build/system.src.js"></script>
-		<script src="build/system-polyfills.src.js"></script>
-		<script src="jspm.config.js"></script>
-		<script src="jspm.dev.js"></script>
-		<script src="build/common-deps.js"></script>
-		<script src="build/shared.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="/build/common.js"></script>
+    <script src="/build/main.js"></script>
 
 	</head>
 	<body>
-		<script>
-			SystemJS
-			.import('angular')
-			.then(function(angular) {
-				window.angular = angular;
-			})
-			.catch(function(err) {
-				setTimeout(function() {throw err}, 0);
-			});
-
-			SystemJS.import('/build/single-spa-examples.js');
-		</script>
 		<div id="navbar"></div>
 		<div id="home"></div>
 		<div id="angular1"></div>

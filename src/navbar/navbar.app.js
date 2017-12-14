@@ -16,24 +16,24 @@ import navbar from './navbar.component.js';
  */
 
 const reactLifecyles = singleSpaReact({
-	React,
-	ReactDOM,
-	domElementGetter,
-	rootComponent: navbar,
+  React,
+  ReactDOM,
+  domElementGetter,
+  rootComponent: navbar,
 });
 
 export const bootstrap = [
-	reactLifecyles.bootstrap,
+  reactLifecyles.bootstrap,
 ];
 
 export const mount = [
-	reactLifecyles.mount,
+  reactLifecyles.mount,
 ];
 
 export const unmount = [
-	reactLifecyles.unmount,
+  reactLifecyles.unmount,
 ];
 
 function domElementGetter() {
-	return document.getElementById("navbar");
+  return document.getElementById("navbar");
 }

@@ -1,33 +1,33 @@
 import angular from 'angular';
 import template from './root.template.html';
-import {showFrameworkObservable, getBorder} from 'common/colored-border.js';
+import {showFrameworkObservable, getBorder} from '../common/colored-border.js';
 
 angular
 .module('single-spa-app')
 .component('root', {
-	template,
-	controllerAs: 'vm',
-	controller($timeout) {
-		const vm = this;
+  template,
+  controllerAs: 'vm',
+  controller($timeout) {
+    const vm = this;
 
-		vm.frameworkInspector = false;
-		vm.styles = {};
+    vm.frameworkInspector = false;
+    vm.styles = {};
 
-		let subscription;
+    let subscription;
 
-		vm.$onInit = () => {
-			subscription = showFrameworkObservable.subscribe(
-				frameworkInspector => {
-					$timeout(() => {
-						vm.styles = frameworkInspector ? {border: getBorder('angular1')} : {};
-						vm.frameworkInspector = frameworkInspector;
-					});
-				}
-			);
-		};
+    vm.$onInit = () => {
+      subscription = showFrameworkObservable.subscribe(
+        frameworkInspector => {
+          $timeout(() => {
+            vm.styles = frameworkInspector ? {border: getBorder('angular1')} : {};
+            vm.frameworkInspector = frameworkInspector;
+          });
+        }
+      );
+    };
 
-		vm.$onDestroy = () => {
-			subscription.dispose();
-		}
-	}
+    vm.$onDestroy = () => {
+      subscription.dispose();
+    }
+  }
 })

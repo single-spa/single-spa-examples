@@ -1,33 +1,33 @@
 {{#if frameworkInspector}}
 <div style='border: {{border}}'>
-	<span>(Built with Svelte)</span>
-	<h1>Hello {{world}}!</h1>
+  <span>(Built with Svelte)</span>
+  <h1>Hello {{world}}!</h1>
 </div>
 {{/if}}
 
 {{#if !frameworkInspector}}
-	<h1>Hello {{world}}!</h1>
+  <h1>Hello {{world}}!</h1>
 {{/if}}
 
 <script>
-import { showFrameworkObservable, getBorder } from 'common/colored-border.js';
+import { showFrameworkObservable, getBorder } from 'src/common/colored-border.js';
 
 export default {
-	onrender () {
-		this.subscription = showFrameworkObservable.subscribe(
-			newValue => this.set({frameworkInspector: newValue})
-		);
-	},
+  onrender () {
+    this.subscription = showFrameworkObservable.subscribe(
+      newValue => this.set({frameworkInspector: newValue})
+    );
+  },
 
-	onteardown () {
-		this.subscription.dispose();
-	},
+  onteardown () {
+    this.subscription.dispose();
+  },
 
-	data () {
-		return {
-			frameworkInspector: false,
-			border: getBorder('svelte'),
-		};
-	},
+  data () {
+    return {
+      frameworkInspector: false,
+      border: getBorder('svelte'),
+    };
+  },
 };
 </script>

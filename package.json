@@ -2,21 +2,12 @@
   "name": "single-spa-examples",
   "description": "This is an example of examples on how to use [single-spa](https://github.com/joeldenning/single-spa) in a variety of contexts. Right now there are examples with the following technologies:",
   "scripts": {
-    "postinstall": "jspm install && npm run ember-install && npm run build",
-    "start": "http-server -c 1",
-    "build": "node bin/build-code.js",
-    "build-home": "node bin/build-home.js",
-    "build-common-deps": "node bin/build-common-deps.js",
-    "build-navbar": "node bin/build-navbar.js",
-    "build-root": "node bin/build-root.js",
-    "build-angular1": "node bin/build-angular1.js",
-    "build-react": "node bin/build-react.js",
-    "build-preact": "node bin/build-preact.js",
-    "build-vanilla": "node bin/build-vanilla.js",
-    "build-angular2": "node bin/build-angular2.js",
-    "build-ember": "node bin/build-ember.js",
-    "build-inferno": "node bin/build-inferno.js",
-    "ember-install": "cd src/ember-app && npm install && cd ../.."
+    "start": "webpack-dev-server",
+    "build": "rimraf build && npm run ember-install && npm run build-ember && npm run build-vanilla",
+    "ember-install": "cd src/ember-app && npm install && cd ../..",
+    "build-webpack": "webpack --config webpack.config.js",
+    "build-ember": "cd src/ember-app && ember build --output-path ../../build/ember-app/ --environment production && cd ../..",
+    "build-vanilla": "cpx \"src/vanillajs/**\" build/vanillajs && cpx \"node_modules/todomvc-app-css/*\" build/todomvc-app-css && cpx \"node_modules/todomvc-common/*\" build/todomvc-common"
   },
   "repository": {
     "type": "git",
@@ -29,237 +20,61 @@
   },
   "homepage": "https://github.com/joeldenning/single-spa-examples#readme",
   "devDependencies": {
-    "babel-loader": "^6.2.10",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-inferno": "^3.3.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "cpx": "^1.5.0",
     "css-loader": "^0.28.7",
-    "ember-cli": "^2.16.2",
-    "http-server": "^0.10.0",
+    "html-loader": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.19.0",
+    "svelte": "^1.47.2",
+    "svelte-loader": "^2.2.1",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "@angular/common": "^5.1.1",
+    "@angular/compiler": "^5.1.1",
+    "@angular/core": "^5.1.1",
+    "@angular/platform-browser": "^5.1.1",
+    "@angular/platform-browser-dynamic": "^5.1.1",
+    "angular": "^1.6.7",
+    "angular-ui-router": "1.0.0-beta.2",
+    "aphrodite": "^1.2.5",
     "inferno": "^3.10.1",
     "inferno-component": "^3.10.1",
     "inferno-create-element": "^3.10.1",
-    "jspm": "0.17.0-beta.32",
-    "mkdirp": "^0.5.1",
-    "react-router": "^3.2.0",
-    "rimraf": "^2.6.2",
+    "preact": "^8.2.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^3",
+    "reflect-metadata": "^0.1.10",
+    "rx": "^4.1.0",
+    "rxjs": "^5.5.5",
+    "single-spa": "^3.6.1",
+    "single-spa-angular1": "^2.6.0",
+    "single-spa-angular2": "^1.1.0",
+    "single-spa-ember": "^0.1.6",
     "single-spa-inferno": "^1.0.1",
+    "single-spa-preact": "^1.0.1",
     "single-spa-react": "^2.0.4",
-    "svelte-cli": "^1.4.0",
-    "webpack": "^1.14.0"
-  },
-  "jspm": {
-    "name": "single-spa-examples",
-    "main": "single-spa-examples.js",
-    "dependencies": {
-      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.1.2",
-      "angular-ui-router": "npm:angular-ui-router@^1.0.0-beta.2",
-      "aphrodite": "npm:aphrodite@^1.1.0",
-      "css": "github:systemjs/plugin-css@^0.1.32",
-      "preact": "npm:preact@^7.1.0",
-      "react-dom": "npm:react-dom@^15.4.1",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.9",
-      "rx": "npm:rx@^4.1.0",
-      "single-spa": "npm:single-spa@^3.4.3",
-      "single-spa-angular1": "npm:single-spa-angular1@^2.2.3",
-      "single-spa-angular2": "npm:single-spa-angular2@^1.0.0",
-      "single-spa-ember": "npm:single-spa-ember@^0.1.6",
-      "single-spa-inferno": "npm:single-spa-inferno@^1.0.1",
-      "single-spa-preact": "npm:single-spa-preact@^1.0.1",
-      "single-spa-react": "npm:single-spa-react@^2.0.3",
-      "single-spa-svelte": "npm:single-spa-svelte@^0.1.0",
-      "single-spa-vue": "npm:single-spa-vue@0.0.3",
-      "text": "github:systemjs/plugin-text@^0.0.9",
-      "ts": "github:frankwallis/plugin-typescript@^5.2.9",
-      "vue": "npm:vue@^2.1.8"
-    },
-    "devDependencies": {
-      "babel-plugin-syntax-jsx": "npm:babel-plugin-syntax-jsx@^6.18.0",
-      "babel-plugin-transform-react-jsx": "npm:babel-plugin-transform-react-jsx@^6.8.0",
-      "babel-preset-stage-0": "npm:babel-preset-stage-0@^6.16.0",
-      "core-js": "npm:core-js@^2.4.1",
-      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.18"
-    },
-    "peerDependencies": {
-      "@angular/common": "npm:@angular/common@2.1.2",
-      "@angular/compiler": "npm:@angular/compiler@2.1.2",
-      "@angular/core": "npm:@angular/core@2.1.2",
-      "@angular/platform-browser": "npm:@angular/platform-browser@^2.1.2",
-      "angular": "npm:angular@^1.6.1",
-      "assert": "npm:jspm-nodelibs-assert@^0.2.0",
-      "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
-      "child_process": "npm:jspm-nodelibs-child_process@^0.2.0",
-      "constants": "npm:jspm-nodelibs-constants@^0.2.0",
-      "crypto": "npm:jspm-nodelibs-crypto@^0.2.0",
-      "domain": "npm:jspm-nodelibs-domain@^0.2.0",
-      "events": "npm:jspm-nodelibs-events@^0.2.0",
-      "fs": "npm:jspm-nodelibs-fs@^0.2.0",
-      "http": "npm:jspm-nodelibs-http@^0.2.0",
-      "https": "npm:jspm-nodelibs-https@^0.2.0",
-      "module": "npm:jspm-nodelibs-module@^0.2.0",
-      "net": "npm:jspm-nodelibs-net@^0.2.0",
-      "os": "npm:jspm-nodelibs-os@^0.2.0",
-      "path": "npm:jspm-nodelibs-path@^0.2.0",
-      "process": "npm:jspm-nodelibs-process@^0.2.0",
-      "react": "npm:react@^15.4.1",
-      "rxjs": "npm:rxjs@5.0.0-beta.12",
-      "stream": "npm:jspm-nodelibs-stream@^0.2.0",
-      "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
-      "timers": "npm:jspm-nodelibs-timers@^0.2.0",
-      "url": "npm:jspm-nodelibs-url@^0.2.0",
-      "util": "npm:jspm-nodelibs-util@^0.2.0",
-      "vm": "npm:jspm-nodelibs-vm@^0.2.0",
-      "zlib": "npm:jspm-nodelibs-zlib@^0.2.0",
-      "zone.js": "npm:zone.js@^0.6.21"
-    },
-    "overrides": {
-      "npm:@angular/common@2.1.2": {
-        "meta": {
-          "src/*.js": {
-            "deps": [
-              "reflect-metadata",
-              "zone.js"
-            ]
-          }
-        },
-        "map": {
-          "@angular/common": ".",
-          "./testing": "./bundles/common-testing.umd.js"
-        }
-      },
-      "npm:@angular/compiler@2.1.2": {
-        "meta": {
-          "src/*.js": {
-            "deps": [
-              "reflect-metadata",
-              "zone.js"
-            ]
-          }
-        },
-        "map": {
-          "@angular/compiler": ".",
-          "./testing": "./bundles/compiler-testing.umd.js"
-        }
-      },
-      "npm:@angular/core@2.1.2": {
-        "meta": {
-          "src/*.js": {
-            "deps": [
-              "reflect-metadata",
-              "zone.js"
-            ]
-          }
-        },
-        "map": {
-          "@angular/core": ".",
-          "./testing": "./bundles/core-testing.umd.js"
-        }
-      },
-      "npm:@angular/platform-browser-dynamic@2.1.2": {
-        "meta": {
-          "src/*.js": {
-            "deps": [
-              "reflect-metadata",
-              "zone.js"
-            ]
-          }
-        },
-        "map": {
-          "@angular/platform-browser-dynamic": ".",
-          "./testing": "./bundles/platform-browser-dynamic-testing.umd.js"
-        }
-      },
-      "npm:@angular/platform-browser@2.1.2": {
-        "meta": {
-          "src/*.js": {
-            "deps": [
-              "reflect-metadata",
-              "zone.js"
-            ]
-          }
-        },
-        "map": {
-          "@angular/platform-browser": ".",
-          "./testing": "./bundles/platform-browser-testing.umd.js"
-        }
-      },
-      "npm:angular@1.5.8": {
-        "format": "global",
-        "jspmNodeConversion": false,
-        "main": "angular",
-        "meta": {
-          "angular.js": {
-            "exports": "angular",
-            "format": "global"
-          }
-        }
-      },
-      "npm:browserify-zlib@0.1.4": {
-        "dependencies": {
-          "readable-stream": "^2.0.2",
-          "pako": "~0.2.0"
-        },
-        "map": {
-          "_stream_transform": "readable-stream/transform"
-        }
-      },
-      "npm:debug@2.6.0": {
-        "main": "src/browser.js",
-        "jspmNodeConversion": false,
-        "format": "cjs",
-        "map": {
-          "fs": "@empty",
-          "net": "@empty",
-          "tty": "@empty",
-          "util": "@empty"
-        }
-      },
-      "npm:inherits@2.0.3": {
-        "ignore": [
-          "test.js"
-        ]
-      },
-      "npm:lodash@4.16.2": {
-        "map": {
-          "buffer": "@empty",
-          "process": "@empty"
-        }
-      },
-      "npm:lodash@4.17.3": {
-        "map": {
-          "buffer": "@empty",
-          "process": "@empty"
-        }
-      },
-      "npm:ms@0.7.2": {
-        "jspmNodeConversion": false,
-        "format": "cjs"
-      },
-      "npm:reflect-metadata@0.1.9": {
-        "jspmNodeConversion": false,
-        "map": {
-          "crypto": {
-            "node": "@node/crypto",
-            "default": "@empty"
-          }
-        }
-      },
-      "npm:typescript@2.1.1": {
-        "browser": {},
-        "map": {
-          "buffer": "@empty",
-          "child_process": "@empty",
-          "fs": "@empty",
-          "path": "@empty",
-          "process": "@empty",
-          "readline": "@empty"
-        },
-        "dependencies": {
-          "source-map-support": "*"
-        }
-      }
-    }
+    "single-spa-svelte": "^0.1.0",
+    "single-spa-vue": "^0.0.3",
+    "todomvc-app-css": "^2.1.0",
+    "todomvc-common": "^1.0.4",
+    "vue": "^2.5.10",
+    "zone.js": "^0.8.18"
   }
 }

@@ -4,20 +4,20 @@ import singleSpaInferno from 'single-spa-inferno';
 import rootComponent from './root.component.js';
 
 const infernoLifecycles = singleSpaInferno({
-	Inferno,
-	createElement,
-	rootComponent,
-	domElementGetter: () => document.getElementById('inferno-app')
+  Inferno,
+  createElement,
+  rootComponent,
+  domElementGetter: () => document.getElementById('inferno-app')
 });
 
 export const bootstrap = [
-	infernoLifecycles.bootstrap,
+  infernoLifecycles.bootstrap,
 ];
 
 export const mount = [
-	infernoLifecycles.mount,
+  infernoLifecycles.mount,
 ];
 
 export const unmount = [
-	infernoLifecycles.unmount,
+  infernoLifecycles.unmount,
 ];

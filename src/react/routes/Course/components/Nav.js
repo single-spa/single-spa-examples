@@ -34,7 +34,7 @@ class Nav extends Component {
             key={page[0]}
             activeStyle={index === 0 ? { ...styles.activeLink, paddingLeft: 0 } : styles.activeLink}
             style={index === 0 ? { ...styles.link, paddingLeft: 0 } : styles.link}
-			to={`/react/course/${course.id}/${page[0]}`}
+      to={`/react/course/${course.id}/${page[0]}`}
           >{page[1]}</Link>
         ))}
       </div>
