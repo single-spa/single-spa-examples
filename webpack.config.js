@@ -64,7 +64,7 @@ module.exports = {
         loader: 'ts-loader',
       },
       {
-        test: /svelte\/.+\.html$/,
+        test: /svelte.+\.html$/,
         loader: 'svelte-loader',
       },
     ],
