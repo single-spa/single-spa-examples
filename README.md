@@ -18,7 +18,7 @@ This is an example of examples on how to use [single-spa](https://github.com/joe
 A [demo is live](http://single-spa.surge.sh) on surge.sh.
 
 ## How to get the examples running locally
-```
+```bash
 git clone git@github.com:CanopyTax/single-spa-examples.git
 cd single-spa-examples
 
