@@ -1,5 +1,2 @@
-!build/vanillajs/node_modules/
 bin
 src
-jspm_packages
-!jspm_packages/npm/systemjs-plugin-babel@0.0.17.json

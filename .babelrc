@@ -1,0 +1,16 @@
+{
+  presets: [
+    'react',
+    ['babel-preset-env', {
+      targets: {
+         "browsers": ["last 2 versions"],
+       },
+    }],
+  ],
+  plugins: [
+    'transform-object-rest-spread',
+    'transform-class-properties',
+    'syntax-dynamic-import',
+    'transform-function-bind',
+  ],
+}
