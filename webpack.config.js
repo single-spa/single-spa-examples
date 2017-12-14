@@ -38,12 +38,12 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /inferno\/.+\.js$/,
+        test: /inferno.+\.js$/,
         loader: 'babel-loader',
         query: infernoBabelConfig,
       },
       {
-        test: /preact\/.+\.js$/,
+        test: /preact.+\.js$/,
         loader: 'babel-loader',
         query: preactBabelConfig,
       },
