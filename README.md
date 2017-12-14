@@ -22,15 +22,9 @@ A [demo is live](http://single-spa.surge.sh) on surge.sh.
 git clone git@github.com:CanopyTax/single-spa-examples.git
 cd single-spa-examples
 
-# if you use yarn
+# Install yarn at https://yarnpkg.com/lang/en/docs/install/
 yarn
 yarn build
 yarn start
-open http://localhost:8080
-
-# if you use npm
-npm install
-npm run build
-npm start
 open http://localhost:8080
 ```

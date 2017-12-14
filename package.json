@@ -3,8 +3,8 @@
   "description": "This is an example of examples on how to use [single-spa](https://github.com/joeldenning/single-spa) in a variety of contexts. Right now there are examples with the following technologies:",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "rimraf build && npm run ember-install && npm run build-ember && npm run build-vanilla",
-    "ember-install": "cd src/ember-app && npm install && cd ../..",
+    "build": "rimraf build && yarn ember-install && yarn build-ember && yarn build-vanilla",
+    "ember-install": "cd src/ember-app && yarn && cd ../..",
     "build-webpack": "webpack --config webpack.config.js",
     "build-ember": "cd src/ember-app && ember build --output-path ../../build/ember-app/ --environment production && cd ../..",
     "build-vanilla": "cpx \"src/vanillajs/**\" build/vanillajs && cpx \"node_modules/todomvc-app-css/*\" build/todomvc-app-css && cpx \"node_modules/todomvc-common/*\" build/todomvc-common"
@@ -34,6 +34,7 @@
     "babel-preset-react": "^6.24.1",
     "cpx": "^1.5.0",
     "css-loader": "^0.28.7",
+    "ember-cli": "^2.17.1",
     "html-loader": "^0.5.1",
     "rimraf": "^2.6.2",
     "style-loader": "^0.19.0",
