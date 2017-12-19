@@ -74,6 +74,7 @@ module.exports = {
       name: 'common',
       minChunks: module => module.context && module.context.indexOf('node_modules') !== -1
     }),
+    new webpack.ContextReplacementPlugin(/\@angular(\\|\/)core(\\|\/)esm5/, path.join(__dirname, './src')),
   ],
 };
 
