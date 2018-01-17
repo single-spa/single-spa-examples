@@ -36,7 +36,7 @@ export default class Technology extends React.Component {
             <p style={{marginBottom: '3px'}}>
               {explanation}
             </p>
-            <a className="waves-effect waves-teal btn-flat" href={href} style={{width: '100%', textAlign: 'center'}}>
+            <a className="waves-effect waves-teal btn-flat" onClick={() => this.navigateTo(href)} style={{width: '100%', textAlign: 'center'}}>
               Open app
             </a>
           </div>
@@ -44,4 +44,6 @@ export default class Technology extends React.Component {
       </div>
     )
   }
+
+  navigateTo = url => window.history.pushState(null, null, url)
 }

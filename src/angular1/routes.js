@@ -6,10 +6,9 @@ import './lorem-ipsum.component.js';
 angular
 .module('single-spa-app')
 .config(($stateProvider, $locationProvider) => {
-  $locationProvider.hashPrefix('');
 
   $locationProvider.html5Mode({
-    enabled: false,
+    enabled: true,
     requireBase: false,
   });
 
