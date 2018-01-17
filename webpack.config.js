@@ -21,6 +21,9 @@ module.exports = {
     port: 8080,
     publicPath: '/build/',
     contentBase: './',
+    historyApiFallback: {
+      index: '200.html',
+    },
   },
   resolve: {
     modules: [
