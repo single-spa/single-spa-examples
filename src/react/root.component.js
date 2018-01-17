@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, hashHistory } from 'react-router';
+import { Router, browserHistory } from 'react-router';
 import { showFrameworkObservable, getBorder } from 'src/common/colored-border.js';
 
 import './stubs/COURSES';
@@ -36,7 +36,7 @@ export default class Root extends React.Component {
           <div>(built with React)</div>
         }
         <Router
-          history={hashHistory}
+          history={browserHistory}
           routes={rootRoute}
         />
       </div>

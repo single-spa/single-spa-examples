@@ -51,6 +51,8 @@ export default class Navbar extends React.Component {
   componentWillUnmount() {
     this.subscription.dispose();
   }
+
+  navigateTo = url => window.history.pushState(null, null, url)
 }
 
 function menuItems() {
@@ -58,52 +60,52 @@ function menuItems() {
     <div>
       <FrameworkInspector />
       <li>
-        <a href="#">
+        <a onClick={() => this.navigateTo("/")}>
           Home
         </a>
       </li>
       <li>
-        <a href="#/react">
+        <a onClick={() => this.navigateTo("/react")}>
           React
         </a>
       </li>
       <li>
-        <a href="#/angular1">
+        <a onClick={() => this.navigateTo("/angular1")}>
           Angular 1
         </a>
       </li>
       <li>
-        <a href="#/angular2">
+        <a onClick={() => this.navigateTo("/angular2")}>
           Angular 2
         </a>
       </li>
       <li>
-        <a href="#/vue">
+        <a onClick={() => this.navigateTo("/vue")}>
           Vue.js
         </a>
       </li>
       <li>
-        <a href="#/svelte">
+        <a onClick={() => this.navigateTo("/svelte")}>
           Svelte
         </a>
       </li>
       <li>
-        <a href="#/preact">
+        <a onClick={() => this.navigateTo("/preact")}>
           Preact
         </a>
       </li>
       <li>
-        <a href="#/vanilla">
+        <a onClick={() => this.navigateTo("/vanilla")}>
           Vanilla
         </a>
       </li>
       <li>
-        <a href="#/inferno">
+        <a onClick={() => this.navigateTo("/inferno")}>
           Inferno
         </a>
       </li>
       <li>
-        <a href="#/ember">
+        <a onClick={() => this.navigateTo("/ember")}>
           Ember
         </a>
       </li>
