@@ -6537,9 +6537,9 @@ single-spa-svelte@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/single-spa-svelte/-/single-spa-svelte-0.1.0.tgz#b9f675d64ff1e22a51c864097c658f056567252f"
 
-single-spa-vue@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/single-spa-vue/-/single-spa-vue-0.0.3.tgz#33f9b80eee1efcca3fb6a9b42c1725c6341c7b18"
+single-spa-vue@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/single-spa-vue/-/single-spa-vue-1.0.1.tgz#40c6358ace71322ed8f1afc56cc593d1bdab5f0a"
 
 single-spa@^3.6.1:
   version "3.6.1"
@@ -7425,9 +7425,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue@^2.5.10:
-  version "2.5.10"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.10.tgz#dcd772e2594ba994145f2f09522149d9a1e7841a"
+vue@^2.5.13:
+  version "2.5.13"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.13.tgz#95bd31e20efcf7a7f39239c9aa6787ce8cf578e1"
 
 walk-sync@^0.2.7:
   version "0.2.7"
