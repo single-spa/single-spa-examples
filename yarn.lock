@@ -6529,9 +6529,9 @@ single-spa-preact@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/single-spa-preact/-/single-spa-preact-1.0.1.tgz#7f9b0c9ac2b552c9a6a74c922be7ac922f26041a"
 
-single-spa-react@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/single-spa-react/-/single-spa-react-2.0.4.tgz#0a9c30d8e24090732e8e6d3fe6495040ba0f3d8d"
+single-spa-react@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/single-spa-react/-/single-spa-react-2.2.0.tgz#bd9bc5595a6c7a71ead6ce0e420b9485ce764a63"
 
 single-spa-svelte@^0.1.0:
   version "0.1.0"

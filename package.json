@@ -70,7 +70,7 @@
     "single-spa-ember": "^0.1.6",
     "single-spa-inferno": "^1.0.1",
     "single-spa-preact": "^1.0.1",
-    "single-spa-react": "^2.0.4",
+    "single-spa-react": "^2.2.0",
     "single-spa-svelte": "^0.1.0",
     "single-spa-vue": "^1.0.1",
     "todomvc-app-css": "^2.1.0",
