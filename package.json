@@ -66,7 +66,7 @@
     "rxjs": "^5.5.5",
     "single-spa": "^3.6.1",
     "single-spa-angular1": "^2.6.0",
-    "single-spa-angular2": "^1.1.0",
+    "single-spa-angular2": "^1.2.0",
     "single-spa-ember": "^0.1.6",
     "single-spa-inferno": "^1.0.1",
     "single-spa-preact": "^1.0.1",

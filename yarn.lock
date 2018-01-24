@@ -6513,9 +6513,9 @@ single-spa-angular1@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/single-spa-angular1/-/single-spa-angular1-2.6.0.tgz#6551433bfe7f80cb930aa200af90231eb272ad07"
 
-single-spa-angular2@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/single-spa-angular2/-/single-spa-angular2-1.1.0.tgz#961eeeb81c63df51f5293ed7c68a514bd16b7f84"
+single-spa-angular2@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/single-spa-angular2/-/single-spa-angular2-1.2.0.tgz#9287e8bb19f2b01297172e36e75001e66c0e8207"
 
 single-spa-ember@^0.1.6:
   version "0.1.6"
