@@ -19,7 +19,7 @@ angular
       subscription = showFrameworkObservable.subscribe(
         frameworkInspector => {
           $timeout(() => {
-            vm.styles = frameworkInspector ? {border: getBorder('angular1')} : {};
+            vm.styles = frameworkInspector ? {border: getBorder('angularjs')} : {};
             vm.frameworkInspector = frameworkInspector;
           });
         }

@@ -1,17 +1,17 @@
-import singleSpaAngular1 from 'single-spa-angular1';
+import singleSpaAngularJS from 'single-spa-angularjs';
 import angular from 'angular';
 /* We import app.module.js before routes.js because we need to create the 'app' module
- * before we try to use it. SystemJS (which is used to bundle this angular1 app) does
+ * before we try to use it. SystemJS (which is used to bundle this angularjs app) does
  * ensure that imports are executed with the first import exectued first. This nuance
- * is something caused by angular 1's dependency injection layer that was invented before
+ * is something caused by angularjs's dependency injection layer that was invented before
  * es6 import statements.
  */
 import './app.module.js';
 import './routes.js';
 
-const domElementGetter = () => document.getElementById('angular1');
+const domElementGetter = () => document.getElementById('angularjs');
 
-const angularLifecycles = singleSpaAngular1({
+const angularLifecycles = singleSpaAngularJS({
   angular,
   domElementGetter,
   mainAngularModule: 'single-spa-app',

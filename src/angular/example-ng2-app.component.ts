@@ -6,14 +6,14 @@ import {showFrameworkObservable, getBorder} from '../common/colored-border.js';
   template: `
     <div [style.border]="border">
       <div *ngIf="showFramework">
-        (built with Angular 2)
+        (built with Angular)
       </div>
       <div class="container">
         <h5>
-          This is just a hello world from Angular 2.
+          This is just a hello world from Angular.
         </h5>
         <div>
-          Nothing fancy, just shows off how Angular 2 apps
+          Nothing fancy, just shows off how Angular apps
           can easily fit into single-spa.
         </div>
       </div>
@@ -34,7 +34,7 @@ export class ExampleNg2App {
   ngOnInit() {
     this.subscription = showFrameworkObservable.subscribe(showFramework => {
       this.ngZone.run(() => {
-        this.border = showFramework ? getBorder('angular2') : ``;
+        this.border = showFramework ? getBorder('angular') : ``;
         this.showFramework = showFramework;
       });
     });

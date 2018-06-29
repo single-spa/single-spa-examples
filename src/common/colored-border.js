@@ -5,8 +5,8 @@ export const showFrameworkObservable = new ReplaySubject(1);
 export function getBorder(framework) {
   const colors = {
     react: '#61dafb',
-    angular1: '#A6120D',
-    angular2: '#1976D2',
+    angular: '#A6120D',
+    angular: '#1976D2',
     vue: '#41B883',
     svelte: '#A92224',
     preact: '#673AB8',

@@ -50,16 +50,16 @@ export default class HomeRoot extends React.Component {
               />
               <Technology
                 imgSrc="https://angularjs.org/img/ng-logo.png"
-                cardTitle="Angular 1"
-                href="/angular1"
-                explanation={`Angular 1 has some quirks, but works just fine when you use the single-spa-angular1 npm library to help you set up your app`}
+                cardTitle="AngularJS"
+                href="/angularjs"
+                explanation={`AngularJS has some quirks, but works just fine when you use the single-spa-angularjs npm library to help you set up your app`}
               />
               <Technology
                 imgSrc="/images/angular.svg"
                 imgBackgroundColor="#1976D2"
-                cardTitle="Angular 2"
-                href="/angular2"
-                explanation={`Angular 2 is compatible with single-spa, check out a simple 'Hello World' in the example.`}
+                cardTitle="Angular"
+                href="/angular"
+                explanation={`Angular is compatible with single-spa, check out a simple 'Hello World' in the example.`}
               />
               <Technology
                 imgSrc="https://vuejs.org/images/logo.png"
@@ -114,8 +114,8 @@ export default class HomeRoot extends React.Component {
               <Technology
                 imgSrc="https://avatars3.githubusercontent.com/u/3802108?v=3&s=200"
                 cardTitle="SystemJS"
-                href="/angular1"
-                explanation={`The navbar app, home app, and Angular 1 app are all built with JSPM / SystemJS.`}
+                href="/angularjs"
+                explanation={`The navbar app, home app, and AngularJS app are all built with JSPM / SystemJS.`}
               />
               <Technology
                 imgSrc="http://4.bp.blogspot.com/-rI6g4ZgVqBA/Uv8fPnl9TLI/AAAAAAAAMZU/tbylo5ngisg/s1600/iFrame+Generator.jpg"

@@ -70,13 +70,13 @@ function menuItems() {
         </a>
       </li>
       <li>
-        <a onClick={() => this.navigateTo("/angular1")}>
-          Angular 1
+        <a onClick={() => this.navigateTo("/angularjs")}>
+          AngularJS
         </a>
       </li>
       <li>
-        <a onClick={() => this.navigateTo("/angular2")}>
-          Angular 2
+        <a onClick={() => this.navigateTo("/angular")}>
+          Angular
         </a>
       </li>
       <li>

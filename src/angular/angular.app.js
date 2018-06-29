@@ -1,10 +1,10 @@
 import 'zone.js';
 import 'reflect-metadata';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import singleSpaAngular2 from 'single-spa-angular2';
+import singleSpaAngular from 'single-spa-angular';
 import mainModule from './main-module.ts';
 
-const ng2Lifecycles = singleSpaAngular2({
+const ngLifecycles = singleSpaAngular({
   domElementGetter,
   mainModule,
   angularPlatform: platformBrowserDynamic(),
@@ -12,17 +12,17 @@ const ng2Lifecycles = singleSpaAngular2({
 })
 
 export const bootstrap = [
-  ng2Lifecycles.bootstrap,
+  ngLifecycles.bootstrap,
 ];
 
 export const mount = [
-  ng2Lifecycles.mount,
+  ngLifecycles.mount,
 ];
 
 export const unmount = [
-  ng2Lifecycles.unmount,
+  ngLifecycles.unmount,
 ];
 
 function domElementGetter() {
-  return document.getElementById('angular2');
+  return document.getElementById('angular');
 }

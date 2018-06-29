@@ -25,7 +25,7 @@ export default class Walkthroughs extends React.Component {
                   2. Inspect element on the content, looking for &nbsp; <img src="/images/data-reactroot.png" />
                 </li>
                 <li className={css(styles.explanation)}>
-                  3. Click on the "Angular 1" link in the navbar
+                  3. Click on the "AngularJS" link in the navbar
                 </li>
                 <li className={css(styles.explanation)}>
                   4. Inspect element on the content, looking for &nbsp; <img src="/images/ng-scope.png" />
@@ -46,10 +46,10 @@ export default class Walkthroughs extends React.Component {
                   2. Reload this page
                 </li>
                 <li className={css(styles.explanation)}>
-                  3. Click on the Angular 1 link in the navbar
+                  3. Click on the AngularJS link in the navbar
                 </li>
                 <li className={css(styles.explanation)}>
-                  4. Look for a new network request for the Angular 1 app's code &nbsp; <img src="/images/lazy-load.png" style={{border: '1px solid #e0e0e0'}} />
+                  4. Look for a new network request for the AngularJS app's code &nbsp; <img src="/images/lazy-load.png" style={{border: '1px solid #e0e0e0'}} />
                 </li>
               </ol>
             </div>
@@ -67,7 +67,7 @@ export default class Walkthroughs extends React.Component {
                   2. Inspect element on the navbar. Notice the &nbsp;<img src="/images/data-reactroot.png" />
                 </li>
                 <li className={css(styles.explanation)}>
-                  3. Go to the Angular 1 app and inspect element. &nbsp;<img src="/images/ng-scope.png" />
+                  3. Go to the AngularJS app and inspect element. &nbsp;<img src="/images/ng-scope.png" />
                 </li>
                 <li className={css(styles.explanation)}>
                   This shows a simple example of having a part of page written in one framework (React) while another part
