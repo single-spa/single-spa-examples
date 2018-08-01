@@ -90,6 +90,11 @@ function menuItems() {
         </a>
       </li>
       <li>
+        <a onClick={() => this.navigateTo("/cyclejs")}>
+          CycleJS
+        </a>
+      </li>
+      <li>
         <a onClick={() => this.navigateTo("/preact")}>
           Preact
         </a>

@@ -15,6 +15,7 @@ This is an example of examples on how to use [single-spa](https://github.com/joe
 - Ember
 - Inferno
 - Preact
+- CycleJS
 
 ## View the demo!
 A [demo is live](http://single-spa.surge.sh) on surge.sh.
