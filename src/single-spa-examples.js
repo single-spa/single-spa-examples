@@ -12,6 +12,7 @@ declareChildApplication('svelte', () => import('src/svelte/svelte.app.js'), path
 declareChildApplication('preact', () => import('src/preact/preact.app.js'), pathPrefix('/preact'));
 declareChildApplication('iframe-vanilla-js', () => import('src/vanillajs/vanilla.app.js'), pathPrefix('/vanilla'));
 declareChildApplication('inferno', () => import('src/inferno/inferno.app.js'), pathPrefix('/inferno'));
+declareChildApplication('cyclejs', () => import('src/cyclejs/cycle.app.js'), pathPrefix('/cycle'));
 declareChildApplication('ember', () => loadEmberApp("ember-app", '/build/ember-app/assets/ember-app.js', '/build/ember-app/assets/vendor.js'), pathPrefix('/ember'));
 
 start();

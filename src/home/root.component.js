@@ -74,6 +74,12 @@ export default class HomeRoot extends React.Component {
                 explanation={`Svelte is compatible with single-spa. Easily get started with the single-spa-svelte plugin.`}
               />
               <Technology
+                imgSrc="https://cycle.js.org/img/cyclejs_logo.svg"
+                cardTitle="CycleJS"
+                href="/cyclejs"
+                explanation={`CycleJS is compatible with single-spa. Easily get started with the single-spa-cycle plugin.`}
+              />
+              <Technology
                 imgSrc="https://camo.githubusercontent.com/31415a8c001234dbf4875c2c5a44b646fb9338b4/68747470733a2f2f63646e2e7261776769742e636f6d2f646576656c6f7069742f62343431366435633932623734336462616563316536386263346332376364612f7261772f333233356463353038663765623833346562663438343138616561323132613035646631336462312f7072656163742d6c6f676f2d7472616e732e737667"
                 cardTitle="Preact"
                 href="/preact"

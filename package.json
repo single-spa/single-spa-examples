@@ -51,6 +51,10 @@
     "@angular/core": "^5.1.1",
     "@angular/platform-browser": "^5.1.1",
     "@angular/platform-browser-dynamic": "^5.1.1",
+    "@cycle/dom": "^20.4.0",
+    "@cycle/http": "^14.9.0",
+    "@cycle/run": "^4.4.0",
+    "@pcmnac/single-spa-cycle": "^1.0.1",
     "angular": "^1.6.7",
     "angular-ui-router": "1.0.0-beta.2",
     "aphrodite": "^1.2.5",
@@ -73,9 +77,11 @@
     "single-spa-react": "^2.2.0",
     "single-spa-svelte": "^0.1.0",
     "single-spa-vue": "^1.0.1",
+    "snabbdom-jsx": "^0.4.2",
     "todomvc-app-css": "^2.1.0",
     "todomvc-common": "^1.0.4",
     "vue": "^2.5.13",
+    "xstream": "^11.7.0",
     "zone.js": "^0.8.18"
   }
 }
