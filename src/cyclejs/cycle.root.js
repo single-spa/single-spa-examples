@@ -28,7 +28,6 @@ export default function App (sources) {
   const vtree$ = result$.map(resp=>
     <div style={{width:"100%", textAlign: 'center'}}>
       <h3>This is CycleJS</h3>
-      <p> </p>
       <input
         style={{width: "300px"}}
         className="star-wars-input"
