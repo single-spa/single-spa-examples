@@ -37,14 +37,12 @@ export default class Navbar extends React.Component {
               <ul className="right hide-on-med-and-down">
                 {menuItems.call(this)}
               </ul>
-              <Dialog dialogId="sideNav">
-                <ul className="side-nav" id="mobile-demo">
-                  {menuItems.call(this)}
-                </ul>
-              </Dialog>
             </div>
           </nav>
         </div>
+        <ul className="side-nav" id="mobile-demo">
+          {menuItems.call(this)}
+        </ul>
       </div>
     );
   }
