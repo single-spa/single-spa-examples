@@ -2,7 +2,7 @@ import Ember from 'ember';
 import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
-import singleSpaEmber from 'single-spa-ember/amd/single-spa-ember';
+import singleSpaEmber from 'single-spa-ember';
 
 const App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,

@@ -13,12 +13,6 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  app.import('bower_components/single-spa-ember/amd/single-spa-ember.js', {
-    using: [
-      {transformation: 'amd', as: 'single-spa-ember'},
-    ],
-  });
-
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
