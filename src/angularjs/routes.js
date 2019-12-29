@@ -5,7 +5,7 @@ import './lorem-ipsum.component.js';
 
 angular
 .module('single-spa-app')
-.config(($stateProvider, $locationProvider) => {
+    .config(["$stateProvider", "$locationProvider", ($stateProvider, $locationProvider) => {
 
   $locationProvider.html5Mode({
     enabled: true,
@@ -27,4 +27,4 @@ angular
     url: '/lorem-ipsum',
     template: '<lorem-ipsum />',
   })
-});
+    }]);
